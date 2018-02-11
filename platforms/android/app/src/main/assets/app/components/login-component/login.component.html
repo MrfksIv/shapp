@@ -14,7 +14,9 @@
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
                 <Button class="btn btn-primary w-full" text="Login" (tap)="login()"></Button>
-                <!-- <Button class="btn btn-primary w-full" text="Login with Facebook" (tap)="loginFB()"></Button> -->
+                <Button class="btn btn-primary w-full" text="Login with Facebook" (tap)="loginFB2()"></Button>
+                <Button class="btn btn-primary w-full" text="Login with Google" (tap)="doLoginByGoogle()"></Button>
+                
                 <Label [nsRouterLink]="['/register']" text="Not a member? Register here." class="text-center footnote"></Label>
             </StackLayout>
         </StackLayout>

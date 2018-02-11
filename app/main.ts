@@ -5,11 +5,10 @@ import { AppModule } from "./app.module";
 import * as tnsOAuthModule from 'nativescript-oauth';
 import * as firebase from 'nativescript-plugin-firebase';
 
-
 var facebookInitOptions : tnsOAuthModule.ITnsOAuthOptionsFacebook = {
     clientId: '171980550097374',
     clientSecret: '37bf7d8551c00db26b052df1926913b5',
-    scope: ['email'] //whatever other scopes you need 
+    scope: ['email', 'user_friends'] //whatever other scopes you need 
 };
 
 
@@ -23,7 +22,8 @@ firebase.init({})
    }
 );
 
-// tnsOAuthModule.initFacebook(facebookInitOptions);
+tnsOAuthModule.initFacebook(facebookInitOptions);
+
 // A traditional NativeScript application starts by initializing global objects, setting up global CSS rules, creating, and navigating to the main page. 
 // Angular applications need to take care of their own initialization: modules, components, directives, routes, DI providers. 
 // A NativeScript Angular app needs to make both paradigms work together, so we provide a wrapper platform object, platformNativeScriptDynamic, 

@@ -3,7 +3,7 @@ import { Location } from "@angular/common";
 import { SnackBar } from "nativescript-snackbar";
 
 import * as ApplicationSettings from "application-settings";
-// import * as firebase from 'nativescript-plugin-firebase';
+import * as firebase from 'nativescript-plugin-firebase';
 
 @Component({
     moduleId: module.id,
@@ -27,17 +27,17 @@ export class RegisterComponent {
         if(this.input.firstname && this.input.lastname && this.input.email && this.input.password) {
             ApplicationSettings.setString("account", JSON.stringify(this.input));
 
-            // firebase.createUser({email: this.input.email, password:this.input.password})
-            // .then(
-            //     onfulfilled => {
-            //         console.log("CREATE USER SUCCESS!");
-            //         console.dir(onfulfilled);
-            //     },
-            //     onrejected => {
-            //         console.log("CREATE USER FAILED!");
-            //         console.dir(onrejected);
-            //     }
-            // );
+            firebase.createUser({email: this.input.email, password:this.input.password})
+            .then(
+                onfulfilled => {
+                    console.log("CREATE USER SUCCESS!");
+                    console.dir(onfulfilled);
+                },
+                onrejected => {
+                    console.log("CREATE USER FAILED!");
+                    console.dir(onrejected);
+                }
+            );
 
             this.location.back();
         } else {

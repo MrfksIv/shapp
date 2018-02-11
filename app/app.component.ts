@@ -8,13 +8,5 @@ import * as tnsOAuthModule from 'nativescript-oauth';
 
 export class AppComponent { 
 
-    loginFB() {
-        tnsOAuthModule.ensureValidToken()
-        .then((token:string) => {
-            console.log("token:", token);
-        })
-        .catch( er => {
-            console.log("ERROR:", er);
-        });
-    }
+    
 }

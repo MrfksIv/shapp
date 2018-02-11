@@ -7,7 +7,7 @@
     "messaging": false,
     "crash_reporting": false,
     "storage": false,
-    "facebook_auth": false,
+    "facebook_auth": true,
     "google_auth": true,
     "admob": false,
     "invites": false

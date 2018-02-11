@@ -4,6 +4,7 @@ import { SnackBar } from 'nativescript-snackbar';
 
 import * as ApplicationSettings from 'application-settings';
 import * as firebase from 'nativescript-plugin-firebase';
+import * as tnsOAuthModule from 'nativescript-oauth';
 
 @Component({
     moduleId: module.id,
@@ -26,25 +27,40 @@ export class LoginComponent implements OnInit {
         }
     }
 
-    // public loginFB() {
-    //     console.log("loggin in with FACEBOOK!");
-    //     firebase.login({
-    //         type: firebase.LoginType.FACEBOOK,
-    //         facebookOptions: {
-    //             scope: ['public_profile', 'email', 'user_birhtday', 'user_friends', 'user_location']
-    //         }
-    //     })
-    //     .then(
-    //         result => {
-    //             console.log("FB RESULT:", result);
-    //             (new SnackBar()).simple("Successfully logged in with Facebook!");
-    //         },
-    //         errorMessage => {
-    //             console.log("FB ERROR:", errorMessage);
-    //             (new SnackBar()).simple(errorMessage);
-    //         }
-    //     );
-    // }
+    public loginFB() {
+        console.log("loggin in with FACEBOOK!");
+        firebase.login({
+            type: firebase.LoginType.FACEBOOK,
+            facebookOptions: {
+                // scope: ['public_profile', 'email', 'user_birhtday', 'user_friends', 'user_location']
+                scope: ['public_profile', 'email']
+            }
+        })
+        .then(
+            result => {
+                console.log("FB RESULT:", result);
+                // (new SnackBar()).simple("Successfully logged in with Facebook!");
+            },
+            errorMessage => {
+                console.log("FB ERROR:", errorMessage);
+                // (new SnackBar()).simple(errorMessage);
+            }
+        );
+    }
+
+    
+    loginFB2() {
+        tnsOAuthModule.login()
+        .then((token:string) => {
+            console.log("token:", token);
+            ApplicationSettings.setBoolean("authenticated", true);
+            this.router.navigate(["/secure"], { clearHistory: true });
+        })
+        .catch( er => {
+            console.log("FB2 error:");
+            console.dir(er);
+        });
+    }
 
     public login() {
         console.log("login in");
@@ -67,10 +83,23 @@ export class LoginComponent implements OnInit {
                     (new SnackBar()).simple("Incorrect Credentials!");
                 }
             );
-
         }
-
     }
+
+    public doLoginByGoogle(): void {
+        firebase.login({
+          // note that you need to enable Google auth in your firebase instance
+          type: firebase.LoginType.GOOGLE
+        }).then(
+            result => {
+                ApplicationSettings.setBoolean("authenticated", true);
+                this.router.navigate(["/secure"], { clearHistory: true });
+            },
+            errorMessage => {
+                (new SnackBar()).simple("Incorrect Credentials!");
+            }
+        );
+      }
 
     // public login() {
     //     if(this.input.email && this.input.password) {
