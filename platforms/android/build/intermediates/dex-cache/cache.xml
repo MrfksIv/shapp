@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\9c080ca03a3af4cf604421c6c9e4e3dff39228d0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\new\shapp\platforms\android\app\build\intermediates\pre-dexed\debug\classes_492333946661825b5ea13a2c8f7175ac2125895d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\3f252ca15b8e1c03cfd108f11e103a7ccfa7903e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\new\shapp\platforms\android\app\build\intermediates\pre-dexed\debug\classes_2c8c0505bcd09756fd8def86eab8061df722434e.jar" />
+    </item>
+
+</items>

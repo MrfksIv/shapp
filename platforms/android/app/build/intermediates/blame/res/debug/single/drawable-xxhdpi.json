@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\logo.png",
+        "source": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon.png",
+        "source": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\background.png",
+        "source": "C:\\Users\\mrfksiv\\Documents\\Projects\\new\\shapp\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\background.png"
+    }
+]
