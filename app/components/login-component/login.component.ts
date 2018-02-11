@@ -3,7 +3,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 import { SnackBar } from 'nativescript-snackbar';
 
 import * as ApplicationSettings from 'application-settings';
-// import * as firebase from 'nativescript-plugin-firebase';
+import * as firebase from 'nativescript-plugin-firebase';
 
 @Component({
     moduleId: module.id,
@@ -46,43 +46,43 @@ export class LoginComponent implements OnInit {
     //     );
     // }
 
-    // public login() {
-    //     console.log("login in");
-    //     console.dir(this.input);
-    //     if (this.input.email && this.input.password) {
-
-    //         firebase.login({
-    //             type: firebase.LoginType.PASSWORD,
-    //             passwordOptions: {
-    //                 email: this.input.email,
-    //                 password: this.input.password
-    //             }
-    //         })
-    //         .then(
-    //             result => {
-    //                 ApplicationSettings.setBoolean("authenticated", true);
-    //                 this.router.navigate(["/secure"], { clearHistory: true });
-    //             },
-    //             errorMessage => {
-    //                 (new SnackBar()).simple("Incorrect Credentials!");
-    //             }
-    //         );
-
-    //     }
-
-    // }
-
     public login() {
-        if(this.input.email && this.input.password) {
-            let account = JSON.parse(ApplicationSettings.getString("account", "{}"));
-            if(this.input.email == account.email && this.input.password == account.password) {
-                ApplicationSettings.setBoolean("authenticated", true);
-                this.router.navigate(["/secure"], { clearHistory: true });
-            } else {
-                (new SnackBar()).simple("Incorrect Credentials!");
-            }
-        } else {
-            (new SnackBar()).simple("All Fields Required!");
+        console.log("login in");
+        console.dir(this.input);
+        if (this.input.email && this.input.password) {
+
+            firebase.login({
+                type: firebase.LoginType.PASSWORD,
+                passwordOptions: {
+                    email: this.input.email,
+                    password: this.input.password
+                }
+            })
+            .then(
+                result => {
+                    ApplicationSettings.setBoolean("authenticated", true);
+                    this.router.navigate(["/secure"], { clearHistory: true });
+                },
+                errorMessage => {
+                    (new SnackBar()).simple("Incorrect Credentials!");
+                }
+            );
+
         }
+
     }
+
+    // public login() {
+    //     if(this.input.email && this.input.password) {
+    //         let account = JSON.parse(ApplicationSettings.getString("account", "{}"));
+    //         if(this.input.email == account.email && this.input.password == account.password) {
+    //             ApplicationSettings.setBoolean("authenticated", true);
+    //             this.router.navigate(["/secure"], { clearHistory: true });
+    //         } else {
+    //             (new SnackBar()).simple("Incorrect Credentials!");
+    //         }
+    //     } else {
+    //         (new SnackBar()).simple("All Fields Required!");
+    //     }
+    // }
 }
