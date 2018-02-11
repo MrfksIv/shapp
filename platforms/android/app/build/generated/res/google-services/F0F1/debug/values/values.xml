@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">506660694880-jn1lalk13fu25hgfee3qou81v702kh0r.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://shapp-ebdcb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">506660694880</string>
+    <string name="google_api_key" translatable="false">AIzaSyCMu4SvE0XKMSEdWHGU9ENHqGuja894dM0</string>
+    <string name="google_app_id" translatable="false">1:506660694880:android:d7538a4efbb5d122</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCMu4SvE0XKMSEdWHGU9ENHqGuja894dM0</string>
+    <string name="google_storage_bucket" translatable="false">shapp-ebdcb.appspot.com</string>
+    <string name="project_id" translatable="false">shapp-ebdcb</string>
+</resources>

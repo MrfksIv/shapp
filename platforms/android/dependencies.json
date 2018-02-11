@@ -8,6 +8,14 @@
         "directory": "..\\..\\node_modules\\nativescript-oauth"
     },
     {
+        "name": "nativescript-plugin-firebase",
+        "directory": "..\\..\\node_modules\\nativescript-plugin-firebase"
+    },
+    {
+        "name": "nativescript-snackbar",
+        "directory": "..\\..\\node_modules\\nativescript-snackbar"
+    },
+    {
         "name": "nativescript-theme-core",
         "directory": "..\\..\\node_modules\\nativescript-theme-core"
     },
