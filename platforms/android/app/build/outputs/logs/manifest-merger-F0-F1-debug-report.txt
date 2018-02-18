@@ -72,7 +72,7 @@ MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\mrfksiv\.andro
 MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\mrfksiv\.android\build-cache\b34e5335eed5801f51613cd93d7239c6a756dd42\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\mrfksiv\.android\build-cache\e42c508a5286eeac6c46388832d44bdd7786a3f3\output\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\mrfksiv\.android\build-cache\7f296b854f6ec3abf9ec0de9798e7bd7f94f7560\output\AndroidManifest.xml:20:5-22:41
-MERGED from [:nativescript-optimized:] C:\Users\mrfksiv\.android\build-cache\1c06ebfbff09739fd718cfe8f6f830216adcd718\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\mrfksiv\.android\build-cache\95e01b0236f36193315ae4adbc8e58557d37bcdf\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:firebase-release:] C:\Users\mrfksiv\.android\build-cache\b3e28611a9561f7b657c79167c805c3b756e17a6\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:widgets-release:] C:\Users\mrfksiv\.android\build-cache\713463a7bb4c6c0a82222608214b8d9acf6c720c\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary

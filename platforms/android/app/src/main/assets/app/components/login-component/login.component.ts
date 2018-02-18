@@ -39,7 +39,9 @@ export class LoginComponent implements OnInit {
         .then(
             result => {
                 console.log("FB RESULT:", result);
-                // (new SnackBar()).simple("Successfully logged in with Facebook!");
+                (new SnackBar()).simple("Successfully logged in with Facebook!");
+                ApplicationSettings.setBoolean("authenticated", true);
+                this.router.navigate(["/secure"], { clearHistory: true });
             },
             errorMessage => {
                 console.log("FB ERROR:", errorMessage);
