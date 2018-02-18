@@ -7,6 +7,12 @@
     "id": "org.nativescript.shapp",
     "tns-android": {
       "version": "3.4.1"
+    },
+    "platforms": {
+      "ios": "10.0.0"
+    },
+    "tns-ios": {
+      "version": "3.4.1"
     }
   },
   "dependencies": {

@@ -1,0 +1,173 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-plugin-firebase",
+        "scope": null,
+        "escapedName": "nativescript-plugin-firebase",
+        "name": "nativescript-plugin-firebase",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new"
+    ]
+  ],
+  "_from": "nativescript-plugin-firebase@latest",
+  "_id": "nativescript-plugin-firebase@5.1.6",
+  "_inCache": true,
+  "_location": "/nativescript-plugin-firebase",
+  "_nodeVersion": "6.12.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-plugin-firebase-5.1.6.tgz_1517470777181_0.6351116611622274"
+  },
+  "_npmUser": {
+    "name": "eddyverbruggen",
+    "email": "eddyverbruggen@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-plugin-firebase",
+    "scope": null,
+    "escapedName": "nativescript-plugin-firebase",
+    "name": "nativescript-plugin-firebase",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.6.tgz",
+  "_shasum": "d718fa9aba800d6146d80e368b5f93de77a4fa07",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-plugin-firebase",
+  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new",
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/eddyverbruggen/nativescript-plugin-firebase/issues"
+  },
+  "config": {
+    "typingsproject": "demo-ng"
+  },
+  "dependencies": {
+    "nativescript-hook": "~0.2.0",
+    "prompt-lite": "~0.1.0"
+  },
+  "description": "Fire. Base. Firebase!",
+  "devDependencies": {
+    "tns-core-modules": "~3.3.0",
+    "tns-platform-declarations": "~3.3.0",
+    "tslint": "^5.1.0",
+    "typescript": "~2.4.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "d718fa9aba800d6146d80e368b5f93de77a4fa07",
+    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.6.tgz"
+  },
+  "homepage": "https://github.com/eddyverbruggen/nativescript-plugin-firebase",
+  "keywords": [
+    "ecosystem:nativescript",
+    "NativeScript",
+    "Firebase",
+    "Firestore",
+    "Database",
+    "Authentication",
+    "Push Notifications",
+    "Notifications",
+    "Messaging",
+    "Remote Configuration",
+    "Storage",
+    "Crash Reporting",
+    "Analytics",
+    "Facebook",
+    "Google",
+    "AdMob",
+    "Invites",
+    "Dynamic Links"
+  ],
+  "license": "MIT",
+  "main": "firebase",
+  "maintainers": [
+    {
+      "name": "eddyverbruggen",
+      "email": "eddyverbruggen@gmail.com"
+    }
+  ],
+  "name": "nativescript-plugin-firebase",
+  "nativescript": {
+    "platforms": {
+      "android": "2.3.0",
+      "ios": "2.3.0"
+    },
+    "plugin": {
+      "nan": "true",
+      "pan": "true",
+      "core3": "true",
+      "category": "Processing"
+    },
+    "hooks": [
+      {
+        "type": "before-prepare",
+        "script": "scripts/entitlements-before-prepare.js",
+        "inject": true
+      },
+      {
+        "type": "after-prepare",
+        "script": "scripts/entitlements-after-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "optionalDependencies": {},
+  "readme": "# NativeScript Firebase plugin\n\n[![Build Status][build-status]][build-url]\n[![NPM version][npm-image]][npm-url]\n[![Downloads][downloads-image]][npm-url]\n[![Twitter Follow][twitter-image]][twitter-url]\n\n[build-status]:https://travis-ci.org/EddyVerbruggen/nativescript-plugin-firebase.svg?branch=master\n[build-url]:https://travis-ci.org/EddyVerbruggen/nativescript-plugin-firebase\n[npm-image]:http://img.shields.io/npm/v/nativescript-plugin-firebase.svg\n[npm-url]:https://npmjs.org/package/nativescript-plugin-firebase\n[downloads-image]:http://img.shields.io/npm/dm/nativescript-plugin-firebase.svg\n[twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me\n[twitter-url]:https://twitter.com/eddyverbruggen\n\n<img src=\"docs/images/firebase-logo.png\" width=\"116px\" height=\"32px\" alt=\"Firebase\"/><br/>\n\n## Features\n* [Realtime Database](docs/DATABASE.md)\n* [Firestore](docs/FIRESTORE.md)\n* [Authentication](docs/AUTHENTICATION.md)\n* [Remote Config](docs/REMOTECONFIG.md)\n* [Cloud Messaging](docs/MESSAGING.md)\n* [Storage](docs/STORAGE.md)\n* [Crash Reporting](docs/CRASHREPORTING.md)\n* [Analytics](docs/ANALYTICS.md)\n* [Invites and Dynamic Links](docs/INVITES_DYNAMICLINKS.md)\n* [AdMob](docs/ADMOB.md)\n\n## Prerequisites\nHead on over to [https://console.firebase.google.com/](https://console.firebase.google.com/) and sign up for a free account.\nYour first 'Firebase' will be automatically created and made available via an URL like `https://n-plugin-test.firebaseio.com`.\n\nOpen your Firebase project at the Google console and click 'Add app' to add an iOS and / or Android app. Follow the steps (make sure the bundle id is the same as your `nativescript.id` in `package.json` and you'll be able to download:\n\n* iOS: `GoogleService-Info.plist` which you'll add to your NativeScript project at `app/App_Resources/iOS/GoogleService-Info.plist`\n\n* Android: `google-services.json` which you'll add to your NativeScript project at `app/App_Resources/Android/google-services.json`\n\n## Installation\nIf you rather watch a (slightly outdated) video explaining the steps then check out this step-by-step guide - you'll also learn how to\nadd iOS and Android support to the Firebase console and how to integrate anonymous authentication:\n[![YouTube demo](docs/images/yt-thumb-setup.png)](https://youtu.be/IextEpoIzwE \"YouTube demo\")\n\nFrom the command prompt go to your app's root folder and execute:\n\n```bash\ntns plugin add nativescript-plugin-firebase\n```\n\nThis will launch an install script which will guide you through installing additional components.\nCheck the doc links above to see what's what. You can always change your choices later.\n\n### Config\nIf you choose to save your config during the installation, the supported options may be saved in the `firebase.nativescript.json` at the root of your app.\nThis is to ensure your app may roundtrip source control and installation on CI won't prompt for user input during installation.\n\nYou can reconfigure the plugin by going to the `node_modules/nativescript-plugin-firebase` and running `npm run config`.\n\nYou can also change the configuration by deleting the `firebase.nativescript.json` and reinstalling the plugin.\n\n### iOS (Cocoapods)\nThe Firebase iOS SDK is installed via Cocoapods, so run `pod repo update` from the command prompt (in any folder) to ensure you have the latest spec.\n\n#### Google Play Services Version\nThe plugin will default to [this version](https://github.com/EddyVerbruggen/nativescript-plugin-firebase/blob/master/src/platforms/android/include.gradle#L27) of the Android `play-services-base` SDK.\nIf you need to change the version (to for instance the latest version), you can add a project ext property `googlePlayServicesVersion` to `app/App_Resources/Android/app.gradle`:\n\n```\nproject.ext {\n    googlePlayServicesVersion = \"+\"\n}\n```\n\n## Usage\n\n### Demo app\nIf you want a quickstart, clone the repo, `cd src`, and `npm run demo.ios` or `npm run demo.android`.\n\n### Start-up wiring\nWe need to do some wiring when your app starts, so open `app.js` and add this before `application.start();`:\n\n##### JavaScript\n```js\nvar firebase = require(\"nativescript-plugin-firebase\");\n\nfirebase.init({\n  // Optionally pass in properties for database, authentication and cloud messaging,\n  // see their respective docs.\n}).then(\n    function (instance) {\n      console.log(\"firebase.init done\");\n    },\n    function (error) {\n      console.log(\"firebase.init error: \" + error);\n    }\n);\n```\n\n#### TypeScript\n```js\nconst firebase = require(\"nativescript-plugin-firebase\");\n\nfirebase.init({\n  // Optionally pass in properties for database, authentication and cloud messaging,\n  // see their respective docs.\n}).then(\n  instance => {\n    console.log(\"firebase.init done\");\n  },\n  error => {\n    console.log(`firebase.init error: ${error}`);\n  }\n);\n```\n\n## Known issues on iOS\n\n#### Trouble running on the simulator\nOpen or create `App_Resources/iOS/<appname>.entitlements` and add these two keys with the value `true`:\n\n```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n    <key>com.apple.keystore.access-keychain-keys</key>\n    <true/>\n    <key>com.apple.keystore.device</key>\n    <true/>\n</dict>\n</plist>\n```\n\n#### Authentication failed: invalid_token\nOn the simulator you may see this message if you have more than one app with the Firebase SDK ever installed:\n\n```\n[FirebaseDatabase] Authentication failed: invalid_token (Invalid claim 'aud' in auth token.)\nor\n[FirebaseDatabase] Authentication failed: invalid_token (audience was project 'firegroceries-904d0' but should have been project 'your-firebase-project')\n```\n\nThis is [a known issue in the Firebase SDK](http://stackoverflow.com/questions/37857131/swift-firebase-database-invalid-token-error).\nI always use a real device to avoid this problem, but you can pass an 'iOSEmulatorFlush' option to init.\n```\nfirebase.init({\n  // Optionally pass in properties for database, authentication and cloud messaging,\n  // see their respective docs and 'iOSEmulatorFlush' to flush token before init.\n  iOSEmulatorFlush: true\n}).then()\n```\n\n#### Pod dependency error\nIf you see an error like `Unable to satisfy the following requirements: Firebase (~> 3.17.0) required by Podfile`,\nthen run `pod repo update` on the command line to make sure you have the latest Podspec.\n\nThis could happen when updating the plugin to a new version. You'll want to `tns platform remove ios && tns platform add ios` as well to clean out the old pod version.\n\n## Known issues on Android\n\n#### Genymotion\nYou can use the awesome [Genymotion emulator](https://www.genymotion.com/)\nbut you'll need to [install Google Play Services on it](https://inthecheesefactory.com/blog/how-to-install-google-services-on-genymotion/en) or you'll run into errors during authentication.\n\n#### DexIndexOverflowException\n```\ncom.android.dex.DexIndexOverflowException: method ID not in..\n```\n\nCongrats, you ran into [this issue](https://github.com/NativeScript/android-runtime/issues/344)\nwhich can be solved by adding `multiDexEnabled true` to your `app/App_Resources/Android/app.gradle`\nso it becomes something like this:\n\n```\nandroid {  \n  defaultConfig {  \n    applicationId = \"__PACKAGE__\"  \n    multiDexEnabled true\n    generatedDensities = []\n  }  \n  aaptOptions {  \n    additionalParameters \"--no-version-vectors\"  \n  }  \n}\n```\n\n#### java.lang.OutOfMemoryError: GC overhead limit exceeded\n\nIncrease the Java Max Heap Size like this (the bit at the end):\n\n```\nandroid {  \n  defaultConfig {  \n    applicationId = \"__PACKAGE__\"  \n    multiDexEnabled true\n    generatedDensities = []\n  }\n  aaptOptions {  \n    additionalParameters \"--no-version-vectors\"  \n  }\n  dexOptions {\n    javaMaxHeapSize \"4g\"\n  }\n}\n```\n\n#### FirebaseApp with name [DEFAULT] doesn't exist\nAnother possible error is \"FirebaseApp with name [DEFAULT] doesn't exist.\" which will be solved by\nplacing `google-services.json` to `platforms/android/google-services.json` (see above), and making\nthe changes to `build.gradle` which are mentioned above as well.\n\n#### Errors regarding API level 26.0.0\nUpdate your local Android SDKs:\n\nJust run `$ANDROID_HOME/tools/bin/sdkmanager --update` from a command prompt\nor launch the SDK manager from Android Studio, expand `Extras` and install any pending updates.\n\n#### Found play-services:10.A.B, but version 11.X.Y is needed..\nUpdate your Android bits like the issue above and reinstall the android platform in your project.\n\n#### `include.gradle`: Failed to apply plugin .. For input string: \"+\"\nYou probably have another plugin depending on Google Play Services (Google Maps, perhaps).\nWe need to pin to a specific play services version to play nice with others, so open `app/App_Resources/Android/app.gradle` and add:\n\n```\nandroid {  \n  // other stuff here\n\n  project.ext {\n    googlePlayServicesVersion = \"11.8.0\"\n  }\n}\n```\n\nWhere `\"11.8.0\"` is best set to the same value as the `firebaseVersion` value in [this file](https://github.com/EddyVerbruggen/nativescript-plugin-firebase/blob/master/src/platforms/android/include.gradle).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddyverbruggen/nativescript-plugin-firebase.git"
+  },
+  "scripts": {
+    "ci.tslint": "npm run tslint && npm run tslint.demo",
+    "config": "node scripts/postinstall.js config",
+    "demo-ng.android": "npm run preparedemo-ng && cd ../demo-ng && tns run android --justlaunch",
+    "demo-ng.ios": "npm run preparedemo-ng && cd ../demo-ng && tns run ios --emulator",
+    "demo-ng.ios.device": "npm run preparedemo-ng && cd ../demo-ng && tns platform remove ios && tns run ios",
+    "demo.android": "npm run preparedemo && cd ../demo && tns platform remove android && tns run android --justlaunch",
+    "demo.ios": "npm run preparedemo && cd ../demo && tns run ios --emulator",
+    "demo.ios.device": "npm run preparedemo && cd ../demo && tns platform remove ios && tns run ios",
+    "development.setup": "npm run setup && npm link && cd ../demo && npm link nativescript-plugin-firebase && cd ../src",
+    "generate.typings.android": "java -jar ../../android-dts-generator/dts-generator/build/libs/dts-generator.jar -input ../$npm_package_config_typingsproject/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-$npm_package_config_typings/**/jars/classes.jar -output platforms/android/typings/$npm_package_config_typings",
+    "generate.typings.android.analytics": "npm run generate.typings.android --nativescript-plugin-firebase:typings=analytics-impl",
+    "generate.typings.android.auth": "npm run generate.typings.android --nativescript-plugin-firebase:typings=auth",
+    "generate.typings.android.core": "npm run generate.typings.android --nativescript-plugin-firebase:typings=core",
+    "generate.typings.android.database": "npm run generate.typings.android --nativescript-plugin-firebase:typings=database --nativescript-plugin-firebase:typingsproject=demo",
+    "generate.typings.android.firestore": "npm run generate.typings.android --nativescript-plugin-firebase:typings=firestore",
+    "generate.typings.android.messaging": "npm run generate.typings.android --nativescript-plugin-firebase:typings=messaging",
+    "generate.typings.android.storage": "npm run generate.typings.android --nativescript-plugin-firebase:typings=storage",
+    "generate.typings.ios": "cd ../demo && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo/typings!'",
+    "package": "cd ../publish && rm -rf ./package && ./pack.sh",
+    "plugin.tscwatch": "npm run tsc -- -w",
+    "postinstall": "node postinstall-hooks.js && node scripts/postinstall.js",
+    "preparedemo": "npm run tsc && npm run package && cd ../demo && tns plugin remove nativescript-plugin-firebase && tns plugin add ../publish/package/*.tgz && tns install",
+    "preparedemo-ng": "npm run tsc && npm run package && cd ../demo-ng && tns plugin remove nativescript-plugin-firebase && tns plugin add ../publish/package/*.tgz && tns install",
+    "preuninstall": "node preuninstall-hooks.js",
+    "setup": "node scripts/postinstall.js setup",
+    "setupandinstall": "npm i && cd ../demo && npm i && cd ../demo-ng && npm i && cd ../src && npm run tsc && cd ../demo && tns plugin add ../src && cd ../demo-ng && tns plugin add ../src && cd ../src",
+    "test": "npm run tslint && npm run tslint.demo && cd ../demo && tns build ios && tns build android",
+    "test.android": "cd ../demo && tns test android --justlaunch",
+    "test.ios": "cd ../demo && tns test ios --emulator",
+    "test.ios.device": "cd ../demo && tns platform remove ios && tns test ios",
+    "tsc": "tsc -skipLibCheck",
+    "tslint": "tslint --config '../tslint.json' '*.ts' --exclude '**/node_modules/**'",
+    "tslint.demo": "tslint --config '../tslint.json' '../demo/app/*.ts' --exclude '**/node_modules/**'"
+  },
+  "typings": "index.d.ts",
+  "version": "5.1.6"
+}

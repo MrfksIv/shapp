@@ -1,0 +1,43 @@
+use_frameworks!
+
+target "shapp" do
+# Begin Podfile - /Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-plugin-firebase/platforms/ios/Podfile 
+ pod 'Firebase', '~> 4.8.0'
+pod 'Firebase/Auth'
+
+# Uncomment if you want to enable Realtime DB
+#pod 'Firebase/Database'
+
+# Uncomment if you want to enable Cloud Firestore
+#pod 'Firebase/Firestore'
+
+# Uncomment if you want to enable Remote Config
+#pod 'Firebase/RemoteConfig'
+
+# Uncomment if you want to enable Crash Reporting
+#pod 'Firebase/Crash'
+
+# Uncomment if you want to enable FCM (Firebase Cloud Messaging)
+#pod 'Firebase/Messaging'
+
+# Uncomment if you want to enable Firebase Storage
+#pod 'Firebase/Storage'
+
+# Uncomment if you want to enable AdMob
+#pod 'Firebase/AdMob'
+
+# Uncomment if you want to enable Invites and/or Dynamic Links
+#pod 'Firebase/Invites'
+
+# Uncomment if you want to enable Facebook Authentication
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+
+# Uncomment if you want to enable Google Authentication
+pod 'GoogleSignIn' 
+ # End Podfile 
+# Begin Podfile - /Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-snackbar/platforms/ios/Podfile 
+ pod 'SSSnackbar', :git => 'https://github.com/EddyVerbruggen/SSSnackbar.git', :tag => '0.1.2.4' 
+ # End Podfile 
+
+end
