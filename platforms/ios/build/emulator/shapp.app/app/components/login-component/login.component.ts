@@ -89,9 +89,10 @@ export class LoginComponent implements OnInit {
     }
 
     public doLoginByGoogle(): void {
+        console.log("loggin in with GOOGLE!");
         firebase.login({
-          // note that you need to enable Google auth in your firebase instance
-          type: firebase.LoginType.GOOGLE
+            // note that you need to enable Google auth in your firebase instance
+            type: firebase.LoginType.GOOGLE
         }).then(
             result => {
                 ApplicationSettings.setBoolean("authenticated", true);
@@ -116,4 +117,5 @@ export class LoginComponent implements OnInit {
     //         (new SnackBar()).simple("All Fields Required!");
     //     }
     // }
+    //  
 }

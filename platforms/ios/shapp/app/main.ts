@@ -29,3 +29,5 @@ tnsOAuthModule.initFacebook(facebookInitOptions);
 // A NativeScript Angular app needs to make both paradigms work together, so we provide a wrapper platform object, platformNativeScriptDynamic, 
 // that sets up a NativeScript application and can bootstrap the Angular framework.
 platformNativeScriptDynamic().bootstrapModule(AppModule);
+
+//com.googleusercontent.apps.506660694880-jn1lalk13fu25hgfee3qou81v702kh0r

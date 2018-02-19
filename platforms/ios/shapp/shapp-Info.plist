@@ -46,17 +46,20 @@
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>REVERSED_CLIENT_ID</string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>fb171980550097374</string>
+          <string>com.googleusercontent.apps.506660694880-hmfbqgn0vrr6rb8eauehg8u6cujvjp9c</string>
+          <string>orgnativescriptshapp</string>
         </array>
       </dict>
       <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>orgnativescriptshapp</string>
+          <string>fb171980550097374</string>
         </array>
       </dict>
     </array>

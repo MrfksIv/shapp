@@ -5,19 +5,18 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
-		1C4A4AC52D18480F8BFC3263 /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B66AA393E846E9AB253F92 /* TNSWidgets.framework */; };
-		4308334DBD9842E5BC3AFC3D /* shapp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = A7619F2D52AB43F9BAAFB431 /* shapp.entitlements */; };
-		5902EA16E66649A3A1E21AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F44CE2D12924A6494BBD747 /* Assets.xcassets */; };
-		61C518A8413A46108FC63CD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E102D72FE5934E1491619E1B /* GoogleService-Info.plist */; };
-		63F022684A08774B36CD7EB7 /* Pods_shapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42C128961AE52E8351EB6DD /* Pods_shapp.framework */; };
+		0AD62B44EC2B6A8AD8837310 /* Pods_shapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992D335F5947996206CEBB9 /* Pods_shapp.framework */; };
+		70E9F3D739D840ABA72A9A1C /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA4DBE9C9994FD7AFDD6B1E /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
-		AB305A1E826940B081C0A0E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A8765ADF7044229C98D656 /* LaunchScreen.storyboard */; };
+		AE59EA962E094470A2A81066 /* shapp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 04EE50D3B31248518F6A7519 /* shapp.entitlements */; };
+		BE4D464593094D51BB04767E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06DB53C19F2647829306172E /* Assets.xcassets */; };
 		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
 		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
-		EA69E8CDF20342939259DC60 /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5A39649E0D5E477BBD71F03F /* build.xcconfig */; };
-		F83B06A8F7E94D939F4F0372 /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37B66AA393E846E9AB253F92 /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1CB4B2CDEEE4050B249BAF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B9528B404A54D1B9172376D /* GoogleService-Info.plist */; };
+		D834D4F79D5240A89FCB63F0 /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA4DBE9C9994FD7AFDD6B1E /* TNSWidgets.framework */; };
+		E1A9CF706AAE476A84B09E4B /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2DA368E6EB3440278E36604D /* build.xcconfig */; };
+		F65362BC7F434FE9A433B38D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B8DF5534AC4AE0AB859612 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F83B06A8F7E94D939F4F0372 /* TNSWidgets.framework in Embed Frameworks */,
+				70E9F3D739D840ABA72A9A1C /* TNSWidgets.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,23 +34,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		04A8765ADF7044229C98D656 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = shapp/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37B66AA393E846E9AB253F92 /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = "$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework"; sourceTree = "<group>"; };
-		5A39649E0D5E477BBD71F03F /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = build.xcconfig; path = shapp/Resources/build.xcconfig; sourceTree = "<group>"; };
+		04EE50D3B31248518F6A7519 /* shapp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = shapp.entitlements; path = shapp/Resources/shapp.entitlements; sourceTree = "<group>"; };
+		06DB53C19F2647829306172E /* Assets.xcassets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = Assets.xcassets; path = shapp/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		18B8DF5534AC4AE0AB859612 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = shapp/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DA368E6EB3440278E36604D /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = build.xcconfig; path = shapp/Resources/build.xcconfig; sourceTree = "<group>"; };
+		3B9528B404A54D1B9172376D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "GoogleService-Info.plist"; path = "shapp/Resources/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		858B832E18CA111C00AB12DE /* shapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858B833918CA111C00AB12DE /* shapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "shapp-Info.plist"; sourceTree = "<group>"; };
 		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		858B833F18CA111C00AB12DE /* shapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shapp-Prefix.pch"; sourceTree = "<group>"; };
 		858B843318CA22B800AB12DE /* shapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F44CE2D12924A6494BBD747 /* Assets.xcassets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = Assets.xcassets; path = shapp/Resources/Assets.xcassets; sourceTree = "<group>"; };
-		A7619F2D52AB43F9BAAFB431 /* shapp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = shapp.entitlements; path = shapp/Resources/shapp.entitlements; sourceTree = "<group>"; };
-		B42C128961AE52E8351EB6DD /* Pods_shapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA4DBE9C9994FD7AFDD6B1E /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = "$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework"; sourceTree = "<group>"; };
+		B992D335F5947996206CEBB9 /* Pods_shapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
 		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
 		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
 		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
 		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
-		E102D72FE5934E1491619E1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = "GoogleService-Info.plist"; path = "shapp/Resources/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4A4AC52D18480F8BFC3263 /* TNSWidgets.framework in Frameworks */,
-				63F022684A08774B36CD7EB7 /* Pods_shapp.framework in Frameworks */,
+				D834D4F79D5240A89FCB63F0 /* TNSWidgets.framework in Frameworks */,
+				0AD62B44EC2B6A8AD8837310 /* Pods_shapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +73,7 @@
 				858B833718CA111C00AB12DE /* shapp */,
 				858B833018CA111C00AB12DE /* Frameworks */,
 				858B832F18CA111C00AB12DE /* Products */,
-				A059C42E0C74550A5E1B37F3 /* Pods */,
+				F692E7B6E22A42185DFBF7E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +89,8 @@
 		858B833018CA111C00AB12DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37B66AA393E846E9AB253F92 /* TNSWidgets.framework */,
-				B42C128961AE52E8351EB6DD /* Pods_shapp.framework */,
+				8DA4DBE9C9994FD7AFDD6B1E /* TNSWidgets.framework */,
+				B992D335F5947996206CEBB9 /* Pods_shapp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,23 +118,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A059C42E0C74550A5E1B37F3 /* Pods */ = {
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06DB53C19F2647829306172E /* Assets.xcassets */,
+				3B9528B404A54D1B9172376D /* GoogleService-Info.plist */,
+				18B8DF5534AC4AE0AB859612 /* LaunchScreen.storyboard */,
+				2DA368E6EB3440278E36604D /* build.xcconfig */,
+				04EE50D3B31248518F6A7519 /* shapp.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F692E7B6E22A42185DFBF7E9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E070579D1B39A9D000214BF1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8F44CE2D12924A6494BBD747 /* Assets.xcassets */,
-				E102D72FE5934E1491619E1B /* GoogleService-Info.plist */,
-				04A8765ADF7044229C98D656 /* LaunchScreen.storyboard */,
-				5A39649E0D5E477BBD71F03F /* build.xcconfig */,
-				A7619F2D52AB43F9BAAFB431 /* shapp.entitlements */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +144,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "shapp" */;
 			buildPhases = (
-				BA92DBB5D3699C981E42D1C1 /* [CP] Check Pods Manifest.lock */,
+				F530552C00D10E30B6EBCFE6 /* [CP] Check Pods Manifest.lock */,
 				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
 				858B83F218CA22B800AB12DE /* Sources */,
 				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
@@ -153,8 +152,8 @@
 				858B842C18CA22B800AB12DE /* Resources */,
 				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
 				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
-				466DA350EB78DF8A3B36ECE0 /* [CP] Embed Pods Frameworks */,
-				A54AC9941077594C1F154358 /* [CP] Copy Pods Resources */,
+				34474C6DC29E1D6358C19C48 /* [CP] Embed Pods Frameworks */,
+				48095C59A43E57DAB241905B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,18 +198,18 @@
 			files = (
 				CD45EE7C18DC2D5800FB50C0 /* app in Resources */,
 				858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */,
-				5902EA16E66649A3A1E21AC9 /* Assets.xcassets in Resources */,
-				61C518A8413A46108FC63CD6 /* GoogleService-Info.plist in Resources */,
-				AB305A1E826940B081C0A0E3 /* LaunchScreen.storyboard in Resources */,
-				EA69E8CDF20342939259DC60 /* build.xcconfig in Resources */,
-				4308334DBD9842E5BC3AFC3D /* shapp.entitlements in Resources */,
+				BE4D464593094D51BB04767E /* Assets.xcassets in Resources */,
+				D1CB4B2CDEEE4050B249BAF3 /* GoogleService-Info.plist in Resources */,
+				F65362BC7F434FE9A433B38D /* LaunchScreen.storyboard in Resources */,
+				E1A9CF706AAE476A84B09E4B /* build.xcconfig in Resources */,
+				AE59EA962E094470A2A81066 /* shapp.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		466DA350EB78DF8A3B36ECE0 /* [CP] Embed Pods Frameworks */ = {
+		34474C6DC29E1D6358C19C48 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,7 +241,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shapp/Pods-shapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A54AC9941077594C1F154358 /* [CP] Copy Pods Resources */ = {
+		48095C59A43E57DAB241905B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,24 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shapp/Pods-shapp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA92DBB5D3699C981E42D1C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-shapp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
@@ -321,6 +302,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+		F530552C00D10E30B6EBCFE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
