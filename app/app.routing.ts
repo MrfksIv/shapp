@@ -16,6 +16,7 @@ const routes: Routes = [
     { path: "secure", component: SecureComponent }
 ];
 
+
 @NgModule({
     imports: [NativeScriptRouterModule.forRoot(routes)],
     exports: [NativeScriptRouterModule]

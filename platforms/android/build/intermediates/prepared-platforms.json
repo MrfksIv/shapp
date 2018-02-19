@@ -11,6 +11,7 @@
     "nativescript-angular": true,
     "nativescript-oauth": true,
     "nativescript-plugin-firebase": true,
+    "nativescript-pro-ui": true,
     "nativescript-snackbar": true,
     "nativescript-theme-core": true,
     "reflect-metadata": true,
