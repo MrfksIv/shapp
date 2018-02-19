@@ -3,5 +3,4 @@
         "**/*.js": { "when": "$(basename).ts" }
     },
     "window.zoomLevel": -1
-}{
 }
