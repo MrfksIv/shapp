@@ -1,0 +1,7 @@
+'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlobalVars = Object.freeze({
+    FB_TOKEN: 'fb_token',
+    firebaseDbURL: 'https://shapp-ebdcb.firebaseio.com/'
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2xvYmFsLXZhcnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJnbG9iYWwtdmFycy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZLENBQUM7O0FBRUEsUUFBQSxVQUFVLEdBQUcsTUFBTSxDQUFDLE1BQU0sQ0FBQztJQUNwQyxRQUFRLEVBQUcsVUFBVTtJQUNyQixhQUFhLEVBQUUscUNBQXFDO0NBQ3ZELENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcclxuXHJcbmV4cG9ydCBjb25zdCBHbG9iYWxWYXJzID0gT2JqZWN0LmZyZWV6ZSh7XHJcbiAgICBGQl9UT0tFTiA6ICdmYl90b2tlbicsXHJcbiAgICBmaXJlYmFzZURiVVJMOiAnaHR0cHM6Ly9zaGFwcC1lYmRjYi5maXJlYmFzZWlvLmNvbS8nXHJcbn0pOyJdfQ==

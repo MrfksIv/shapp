@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-fonticon@1.1.1",
+        "scope": null,
+        "escapedName": "nativescript-fonticon",
+        "name": "nativescript-fonticon",
+        "rawSpec": "1.1.1",
+        "spec": "1.1.1",
+        "type": "version"
+      },
+      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new\\node_modules\\nativescript-fontawesome"
+    ]
+  ],
+  "_from": "nativescript-fonticon@1.1.1",
+  "_id": "nativescript-fonticon@1.1.1",
+  "_inCache": true,
+  "_location": "/nativescript-fonticon",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/nativescript-fonticon-1.1.1.tgz_1481784577668_0.6681174889672548"
+  },
+  "_npmUser": {
+    "name": "walkerrunpdx",
+    "email": "walkerrunpdx@gmail.com"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-fonticon@1.1.1",
+    "scope": null,
+    "escapedName": "nativescript-fonticon",
+    "name": "nativescript-fonticon",
+    "rawSpec": "1.1.1",
+    "spec": "1.1.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/nativescript-fontawesome"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-fonticon/-/nativescript-fonticon-1.1.1.tgz",
+  "_shasum": "1ff981e15dbb4382efeee278739217b931c11dcc",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-fonticon@1.1.1",
+  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new\\node_modules\\nativescript-fontawesome",
+  "author": {
+    "name": "Nathan Walker",
+    "email": "walkerrunpdx@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/NathanWalker/nativescript-fonticon/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nathanael Anderson",
+      "email": "nathan@master-technology",
+      "url": "https://github.com/nathanaela"
+    }
+  ],
+  "dependencies": {},
+  "description": "Use custom font icon collections seamlessly with NativeScript.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1ff981e15dbb4382efeee278739217b931c11dcc",
+    "tarball": "https://registry.npmjs.org/nativescript-fonticon/-/nativescript-fonticon-1.1.1.tgz"
+  },
+  "gitHead": "0859c068d72af025be66625a638f85d8b38bfd54",
+  "homepage": "https://github.com/NathanWalker/nativescript-fonticon",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS",
+    "icon",
+    "font icon",
+    "font"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/NathanWalker/nativescript-fonticon/blob/master/LICENSE"
+  },
+  "main": "nativescript-fonticon",
+  "maintainers": [
+    {
+      "name": "walkerrunpdx",
+      "email": "walkerrunpdx@gmail.com"
+    }
+  ],
+  "name": "nativescript-fonticon",
+  "nativescript": {
+    "platforms": {
+      "android": "2.0.0",
+      "ios": "2.0.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "## A simpler way to use font icons with NativeScript\n\n[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)\n[![Dependency Status](https://david-dm.org/NathanWalker/nativescript-fonticon/status.svg)](https://david-dm.org/NathanWalker/nativescript-fonticon#info=dependencies) [![devDependency Status](https://david-dm.org/NathanWalker/nativescript-fonticon/dev-status.svg)](https://david-dm.org/NathanWalker/nativescript-fonticon#info=devDependencies)\n\n### The Problem\n\nYou can use icon fonts with NativeScript by combining a class with a unicode reference in the view:\n\n* css\n```\n.fa {\n  font-family: FontAwesome;\n}\n```\n\n* view\n```\n<Label class=\"fa\" text=\"\\uf293\"></Label>\n```\n\nThis works but keeping up with unicodes is not fun.\n\n### The Solution\n\nWith this plugin, you can instead reference the `fonticon` by the specific classname:\n\n```\n<Label class=\"fa\" text=\"{{'fa-bluetooth' | fonticon}}\"></Label> \n```\n\n## Install\n\n```\nnpm install nativescript-fonticon --save\n```\n\n### Usage\n\n[FontAwesome](https://fortawesome.github.io/Font-Awesome/) will be used in the following examples but you can use any custom font icon collection.\n\n* Place font icon `.ttf` file in `app/fonts`, for example:\n  \n```\napp/fonts/fontawesome-webfont.ttf\n```\n\n* Create base class in `app.css` global file, for example:\n\n```\n.fa {\n  font-family: FontAwesome, fontawesome-webfont;\n}\n```\n\n**NOTE**: Android uses the name of the file for the font-family (In this case, `fontawesome-webfont`.ttf. iOS uses the actual name of the font; for example, as found [here](https://github.com/FortAwesome/Font-Awesome/blob/master/css/font-awesome.css#L8). You could rename the font filename to `FontAwesome.ttf` to use just: `font-family: FontAwesome`. You can [learn more here](http://fluentreports.com/blog/?p=176).(http://fluentreports.com/blog/?p=176).\n\n* Copy css to `app` somewhere, for example:\n\n```\napp/font-awesome.css\n```\n\nThen modify the css file to isolate just the icon fonts needed. [Watch this video to better understand](https://www.youtube.com/watch?v=qb2sk0XXQDw).\n\n* Configure your fonts and setup the converter:\n\n```\nimport * as application from 'application';\nimport {TNSFontIcon, fonticon} from 'nativescript-fonticon';\n\nTNSFontIcon.debug = true; <-- Optional. Will output the css mapping to console.\nTNSFontIcon.paths = {\n  'fa': 'font-awesome.css',\n  'ion': 'ionicons.css'\n};\nTNSFontIcon.loadCss();\n\napplication.resources['fonticon'] = fonticon;\napplication.start({ moduleName: 'main-page' });\n```\n\n* Use the Converter, for example:\n\n```\n<Label class=\"fa\" text=\"{{'fa-bluetooth' | fonticon}}\"></Label> \n``` \n\nDemo FontAwesome (iOS) |  Demo Ionicons (iOS)\n-------- | ---------\n![Sample1](https://cdn.filestackcontent.com/m6JyRO1fTsCHPohoZi5I?v=0) | ![Sample2](https://cdn.filestackcontent.com/jje2pehCRCeLDC8QHBmp?v=0)\n\nDemo FontAwesome (Android) |  Demo Ionicons (Android)\n-------- | -------\n![Sample3](https://cdn.filestackcontent.com/lNCptx2aQisOa6p27iqb?v=0) | ![Sample4](https://cdn.filestackcontent.com/2ajSF92uQDusI37fEvQA?v=0)\n\n## How about NativeScript with Angular?\n\nIf using [Angular](https://angular.io/), use this instead:\n\n* [nativescript-ng2-fonticon](https://github.com/NathanWalker/nativescript-ng2-fonticon)\n\n## Why the TNS prefixed name?\n\n`TNS` stands for **T**elerik **N**ative**S**cript\n\niOS uses classes prefixed with `NS` (stemming from the [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP) days of old):\nhttps://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/\n\nTo avoid confusion with iOS native classes, `TNS` is used instead.\n\n## Credits\n\nIdea came from [Bradley Gore](https://github.com/bradleygore)'s [post here](http://www.blog.bradleygore.com/2016/03/28/font-icons-in-nativescript/).\n\n## Contributors\n\n- [NathanaelA](https://github.com/NathanaelA)\n\n# License\n\n[MIT](/LICENSE)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanWalker/nativescript-fonticon.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo.android": "npm run preparedemo; cd demo; tns run android",
+    "demo.ios": "npm run preparedemo; cd demo; tns emulate ios",
+    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-fonticon; tns plugin add ..; tns install",
+    "setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
+  },
+  "typings": "index.d.ts",
+  "version": "1.1.1"
+}

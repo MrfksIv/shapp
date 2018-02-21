@@ -4,6 +4,10 @@
         "directory": "..\\..\\node_modules\\nativescript-angular"
     },
     {
+        "name": "nativescript-fontawesome",
+        "directory": "..\\..\\node_modules\\nativescript-fontawesome"
+    },
+    {
         "name": "nativescript-oauth",
         "directory": "..\\..\\node_modules\\nativescript-oauth"
     },
@@ -30,6 +34,10 @@
     {
         "name": "nativescript-intl",
         "directory": "..\\..\\node_modules\\nativescript-intl"
+    },
+    {
+        "name": "nativescript-fonticon",
+        "directory": "..\\..\\node_modules\\nativescript-fonticon"
     },
     {
         "name": "tns-core-modules-widgets",

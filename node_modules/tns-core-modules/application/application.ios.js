@@ -15,7 +15,6 @@ var Responder = (function (_super) {
     }
     return Responder;
 }(UIResponder));
-var displayedOnce = false;
 var Window = (function (_super) {
     __extends(Window, _super);
     function Window() {
@@ -58,6 +57,28 @@ var NotificationObserver = (function (_super) {
         "onReceive": { returns: interop.types.void, params: [NSNotification] }
     };
     return NotificationObserver;
+}(NSObject));
+var displayedOnce = false;
+var displayedLinkTarget;
+var displayedLink;
+var CADisplayLinkTarget = (function (_super) {
+    __extends(CADisplayLinkTarget, _super);
+    function CADisplayLinkTarget() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CADisplayLinkTarget.prototype.onDisplayed = function (link) {
+        link.invalidate();
+        var ios = utils.ios.getter(UIApplication, UIApplication.sharedApplication);
+        var object = iosApp;
+        displayedOnce = true;
+        application_common_1.notify({ eventName: application_common_1.displayedEvent, object: object, ios: ios });
+        displayedLinkTarget = null;
+        displayedLink = null;
+    };
+    CADisplayLinkTarget.ObjCExposedMethods = {
+        "onDisplayed": { returns: interop.types.void, params: [CADisplayLink] }
+    };
+    return CADisplayLinkTarget;
 }(NSObject));
 var IOSApplication = (function () {
     function IOSApplication() {
@@ -110,6 +131,12 @@ var IOSApplication = (function () {
         }
     };
     IOSApplication.prototype.didFinishLaunchingWithOptions = function (notification) {
+        if (!displayedOnce && profiling_1.level() >= profiling_1.Level.lifecycle) {
+            displayedLinkTarget = CADisplayLinkTarget.new();
+            displayedLink = CADisplayLink.displayLinkWithTargetSelector(displayedLinkTarget, "onDisplayed");
+            displayedLink.addToRunLoopForMode(NSRunLoop.mainRunLoop, NSDefaultRunLoopMode);
+            displayedLink.addToRunLoopForMode(NSRunLoop.mainRunLoop, UITrackingRunLoopMode);
+        }
         this._window = Window.alloc().initWithFrame(utils.ios.getter(UIScreen, UIScreen.mainScreen).bounds);
         this._window.backgroundColor = utils.ios.getter(UIColor, UIColor.whiteColor);
         var args = {
@@ -144,10 +171,6 @@ var IOSApplication = (function () {
         var content = this._window.content;
         if (content && !content.isLoaded) {
             content.onLoaded();
-        }
-        if (!displayedOnce) {
-            application_common_1.notify({ eventName: application_common_1.displayedEvent, object: object, ios: ios });
-            displayedOnce = true;
         }
     };
     IOSApplication.prototype.didEnterBackground = function (notification) {

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\224ef58acf162799aa7eac171cb8ed69ad79b3d1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="b1339b01865e16e475d64a245fe529682451a67d">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_84ba1c669e1f7165943fc295ec594a9c8556faf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\c800d62116c5daaa696ba36cd7d7258e1cb5d009\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c9cdba8dae1f4168869483047ff5e5c72ad46d42">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_0597e06e62fe429d8e6cc0bb722ad11bc42b1088.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\4a77768a39548364444ae0cf1d9c6e6b30dcd0ce\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="4aaacb48560463db840621574ac215bbd71b5a1c">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_7c9956f4489d1d4b76955436f8ed41210108d328.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\58e024303657b293888b40c7948629c17cd02835\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="9971eabe5d806f8e9037f967c7dddf4331b5a871">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_d626b5c7cd502f29c24ad9f6764681b38f1b5e18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\b15cd6829849b82131fef120a00c3f48af1a5f58\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="982e84611278a70cb494816d909f689869345cd8">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_61948a3e94235dbd4ce421b894c0fd2e34101805.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\5a95fef3bc5a04f1df61bb7ecfb165bf38805e68\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="fe66404378d7791a232cc3331811b2ce402f44c7">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_8a65b42bf517a103dbe4f964a4c150df0208f477.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\e3fedea87d4bea6b54ff66828e4798714a4d54ea\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="4e7ca65463655d11456435e37fba9500c070d05e">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_650a955479751d63d8356c9e00c9ee26acc8dc99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\0546732e1e036e55710f9931804e9bb16149f66d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="7a23b91bd7ef759a98228829e925770b50948873">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_2aeb247e5676c33556395bac7059124fab1c52ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\4511cfaf1e6edcb3ad625888d5c48d844760c867\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_e8d47820dc308747f9587a028430de72ef99d04c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\1efbf670d5d723d0d69d7f65eaf67f8f3b5386d0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5d9328d50f44ddcd29c1efb973fe65c449ac2ee9">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_e88c7534df67a4434abe4e8d4b815bc6aede5456.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\e52409036f1e62145b3a727e3dcec78a23d2ae4d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="999137e347707ccec61d19e49c15d11f20db7a3b">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_7c0f868bd205cf5b8c313899f1aeba9e65bc01c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\f48a7db3616b1814d2012cc3d14443dc552833ec\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_9713b6b7987e35bc795b738d39921cdcc0fd75e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\0a8e5eae59ea475f547d80de3b5fa2acb8b43544\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="9bfec718689ce8acd54ce41541b34af4efb4e226">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_53a1c509cb27cd2b59faf4d87ae3b72ac422dab9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mrfksiv\.android\build-cache\430d4d8c674287bc93181b1d1a5188b9c8e195db\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="e59236507fc1c595cd784ce9aa81c2c04888fd40">
+        <dex dex="C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_960906e81fbb772e033d87546b336016310e2ff3.jar" />
+    </item>
+
+</items>

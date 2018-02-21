@@ -19,6 +19,10 @@ var NativeScriptActivity = (function (_super) {
         }
         this._callbacks.onCreate(this, savedInstanceState, _super.prototype.onCreate);
     };
+    NativeScriptActivity.prototype.onNewIntent = function (intent) {
+        _super.prototype.onNewIntent.call(this, intent);
+        _super.prototype.setIntent.call(this, intent);
+    };
     NativeScriptActivity.prototype.onSaveInstanceState = function (outState) {
         this._callbacks.onSaveInstanceState(this, outState, _super.prototype.onSaveInstanceState);
     };

@@ -1,0 +1,126 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-fontawesome",
+        "scope": null,
+        "escapedName": "nativescript-fontawesome",
+        "name": "nativescript-fontawesome",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new"
+    ]
+  ],
+  "_from": "nativescript-fontawesome@latest",
+  "_id": "nativescript-fontawesome@1.0.0",
+  "_inCache": true,
+  "_location": "/nativescript-fontawesome",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-fontawesome-1.0.0.tgz_1503338712183_0.016991268377751112"
+  },
+  "_npmUser": {
+    "name": "moayad",
+    "email": "moayad@codeobia.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-fontawesome",
+    "scope": null,
+    "escapedName": "nativescript-fontawesome",
+    "name": "nativescript-fontawesome",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-fontawesome/-/nativescript-fontawesome-1.0.0.tgz",
+  "_shasum": "fe9ce6f16490ada123caa29cbdd5349b66814b64",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-fontawesome",
+  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new",
+  "author": {
+    "name": "Moayad Najdawi",
+    "email": "moayad@codeobia.com"
+  },
+  "bootstrapper": "nativescript-plugin-seed",
+  "bugs": {
+    "url": "https://github.com/moayadnajd/nativescript-fontawesome/issues"
+  },
+  "dependencies": {
+    "nativescript-fonticon": "1.1.1"
+  },
+  "description": "Your awesome NativeScript plugin for using fontawesome icons",
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "rimraf": "^2.5.0",
+    "tns-core-modules": "^3.1.0",
+    "tns-platform-declarations": "^3.1.0",
+    "tslint": "^5.0.0",
+    "typescript": "~2.3.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "fe9ce6f16490ada123caa29cbdd5349b66814b64",
+    "tarball": "https://registry.npmjs.org/nativescript-fontawesome/-/nativescript-fontawesome-1.0.0.tgz"
+  },
+  "homepage": "https://github.com/moayadnajd/nativescript-fontawesome",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "fontawesome",
+    "font",
+    "awesome",
+    "codeobia",
+    "moayad",
+    "najdawi",
+    "Android",
+    "iOS"
+  ],
+  "license": "Apache-2.0",
+  "main": "fontawesome",
+  "maintainers": [
+    {
+      "name": "moayad",
+      "email": "moayad@codeobia.com"
+    }
+  ],
+  "name": "nativescript-fontawesome",
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0",
+      "ios": "3.0.0"
+    }
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "tns-core-modules": "^3.0.0"
+  },
+  "readme": "# Nativescript FontAwesome\n\n## A simpler way to use FontAwesome icons with NativeScript\n\n<img src=\"http://codeobia.com/screenshots/nativescript-fontawsome.png\" width=\"300\">\n\n## Install\n\n```\ntns plugin add nativescript-fontawesome\n```\n\n[click here to Download fontawesome-webfont.ttf](https://github.com/moayadnajd/nativescript-fontawesome/blob/master/fonts/fontawesome-webfont.ttf) or download from [fontawesome website](http://fontawesome.io/)\n\n* Place font icon `.ttf` file in `app/fonts`, like below:\n  \n```\napp/fonts/fontawesome-webfont.ttf\n```\n* call the init function in the you'r  app.ts:\n```\nimport { Fontawesome } from 'nativescript-fontawesome';\nFontawesome.init();\n\n```\n### Usage\n\n```\n<Label class=\"fa\" text=\"{{'fa-bluetooth' | fontawesome }}\"></Label> \n``` \n\n## Credits\n\n[nativescript-fonticon](https://github.com/NathanWalker/nativescript-fonticon)",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "npm i && tsc",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
+    "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
+    "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
+    "demo.reset": "cd ../demo && rimraf platforms",
+    "plugin.link": "npm link && cd ../demo && npm link nativescript-fontawesome && cd ../src",
+    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-fontawesome && tns plugin add ../src",
+    "plugin.tscwatch": "npm run tsc -- -w",
+    "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
+    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
+    "tsc": "tsc -skipLibCheck",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
+  },
+  "typings": "index.d.ts",
+  "version": "1.0.0"
+}

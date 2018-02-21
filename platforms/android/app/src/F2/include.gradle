@@ -1,18 +1,15 @@
 android {
-  productFlavors {
-    "nativescript-snackbar" {
-      dimension "nativescript-snackbar"
-    }
-  }
+	productFlavors {
+		"nativescript-pro-ui" {
+			dimension "nativescript-pro-ui"
+		}
+	}
 }
 
-//optional elements
+def supportVersion = project.hasProperty("supportVersion") ? project.supportVersion : "23.3.0"
+
 dependencies {
-	 def supportVer = "22.2.0";
-
-      if(project.hasProperty("supportVersion")) {
-       supportVer = supportVersion
-      }
-
-     compile "com.android.support:design:$supportVer"
+	compile "com.android.support:appcompat-v7:$supportVersion"
+	compile "com.android.support:recyclerview-v7:$supportVersion"
+	compile "com.android.support:design:$supportVersion"
 }
