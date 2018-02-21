@@ -1,0 +1,274 @@
+clang version 4.0.0 (tags/RELEASE_400/final)
+Target: i386-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: 
+clang Invocation:
+ "clang-tool" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar/SSSnackbar.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator/include" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/TKLiveSync/include" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAuth/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDatabase/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInstanceID/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseMessaging/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseStorage/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/GoogleSignIn/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "COCOAPODS=1" "-D" "GTM_OAUTH2_USE_FRAMEWORK_IMPORTS=1" "-D" "GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1" "-D" "PB_FIELD_32BIT=1" "-D" "PB_NO_PACKED_STRUCTS=1" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
+
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator/include"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar/SSSnackbar.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/Library/Frameworks"
+ignoring duplicate directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase"
+  as it is a non-system directory that duplicates a system directory
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/TKLiveSync/include
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAuth/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDatabase/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInstanceID/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseMessaging/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseStorage/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/GoogleSignIn/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase
+ ../lib/clang/4.0.0/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+clang version 4.0.0 (tags/RELEASE_400/final)
+Target: i386-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: 
+clang Invocation:
+ "objc-metadata-generator" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar/SSSnackbar.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers" "-iquote" "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage" "-isystem" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator/include" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal" "-I" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/TKLiveSync/include" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library" "-F/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAuth/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDatabase/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInstanceID/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseMessaging/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseStorage/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/GoogleSignIn/Frameworks" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios" "-F/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "COCOAPODS=1" "-D" "GTM_OAUTH2_USE_FRAMEWORK_IMPORTS=1" "-D" "GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1" "-D" "PB_FIELD_32BIT=1" "-D" "PB_NO_PACKED_STRUCTS=1" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
+
+clang -cc1 version 4.0.0 based upon LLVM 4.0.0 default target x86_64-apple-darwin17.4.0
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator/include"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Bolts/Bolts.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMOAuth2/GTMOAuth2.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/SSSnackbar/SSSnackbar.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Library/Developer/Xcode/DerivedData/shapp-gfoyovlunyvgncdzllpbsefcsdgs/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAnalytics"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseAuth"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseCore"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDatabase"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseDynamicLinks"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInstanceID"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseInvites"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseMessaging"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/FirebaseStorage"
+ignoring nonexistent directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/GoogleSignIn"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/Library/Frameworks"
+ignoring duplicate directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase"
+  as it is a non-system directory that duplicates a system directory
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal/TKLiveSync/include
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/build/emulator (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAuth/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDatabase/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInstanceID/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseMessaging/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseStorage/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/GoogleSignIn/Frameworks (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/internal (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios (framework directory)
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public
+ /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Headers/Public/Firebase
+ ../lib/clang/4.0.0/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+In file included from umbrella.h:499:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.h:12:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h:41:12: error: attributes may not be specified on a category
+@interface MLFeatureDescription (MLFeatureValueConstraints)
+           ^
+In file included from umbrella.h:504:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h:3:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h:1:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h:59:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, readwrite) FIRAnalyticsConfiguration *analyticsConfiguration;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h:59:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:506:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-pro-ui/platforms/ios/TNSListView.framework/Headers/TNSListView.h:26:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSListView.framework/Headers/TKListViewLayoutChange.h:16:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property (nonatomic) NSIndexPath *from;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSListView.framework/Headers/TKListViewLayoutChange.h:16:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSListView.framework/Headers/TKListViewLayoutChange.h:18:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property (nonatomic) NSIndexPath *to;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSListView.framework/Headers/TKListViewLayoutChange.h:18:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:555:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources/Firebase.h:25:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FirebaseDynamicLinks.h:1:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:147:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) NSURL *fallbackURL;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:147:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:166:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) NSURL *iPadFallbackURL;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:166:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:260:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) NSURL *fallbackURL;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:260:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:311:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) NSURL *imageURL;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:311:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:378:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) NSURL *fallbackUrl;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:378:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:437:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkGoogleAnalyticsParameters *analyticsParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:437:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:442:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkSocialMetaTagParameters *socialMetaTagParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:442:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:447:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkIOSParameters *iOSParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:447:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:452:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable)
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:452:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:458:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkAndroidParameters *androidParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:458:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:463:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkNavigationInfoParameters *navigationInfoParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:463:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:468:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkOtherPlatformParameters *otherPlatformParameters;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:468:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:473:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) FIRDynamicLinkComponentsOptions *options;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:473:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:482:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic) NSURL *link;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseDynamicLinks/Frameworks/FirebaseDynamicLinks.framework/Headers/FDLURLComponents.h:482:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:555:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/Firebase/Core/Sources/Firebase.h:37:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks/FirebaseInvites.framework/Headers/FirebaseInvites.h:1:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks/FirebaseInvites.framework/Headers/FIRInvites.h:126:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic) FIRInvitesTargetApplication *targetApp;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseInvites/Frameworks/FirebaseInvites.framework/Headers/FIRInvites.h:126:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:556:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TNSDataForm.h:19:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TKDataForm.h:8:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TKEntityProperty.h:14:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSAutoComplete.framework/Headers/TKAutoCompleteTextView.h:85:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nonnull) TKAutoCompleteCoverView *cover;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSAutoComplete.framework/Headers/TKAutoCompleteTextView.h:85:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:556:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TNSDataForm.h:19:
+In file included from /Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TKDataForm.h:8:
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TKEntityProperty.h:97:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property (nonatomic) NSString *groupName;
+^
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/../../node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TKEntityProperty.h:97:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:556:
+/Users/mrfksiv/Documents/0.projects/shapp/node_modules/nativescript-pro-ui/platforms/ios/TNSDataForm.framework/Headers/TNSDataForm.h:26:9: fatal error: 'TNSDataForm/TKAutoCompleteDataSourceGroupDescriptor.h' file not found
+#import <TNSDataForm/TKAutoCompleteDataSourceGroupDescriptor.h>
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mrfksiv/Documents/0.projects/shapp/platforms/ios/Pods/FirebaseAnalytics/Frameworks/FirebaseCoreDiagnostics.framework/Modules/module.modulemap:3:10: error: inferred submodules require a module with an umbrella
+  module * { export *}
+         ^
+40 warnings and 3 errors generated.

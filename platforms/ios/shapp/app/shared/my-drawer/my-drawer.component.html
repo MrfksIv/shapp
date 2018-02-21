@@ -1,0 +1,38 @@
+<!--
+The MyDrawer custom component view is where you define what will be displayed in the app drawer.
+Feel free to customize layouts and components to change how your app drawer looks.
+-->
+<GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
+    <StackLayout row="0" class="sidedrawer-header">
+        <Label visibility="{{userID ? 'collapse' : 'visible'}}" class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
+        
+        <img 
+            visibility="{{userID ? 'visible' : 'collapse'}}"
+            src="https://graph.facebook.com/{{userID}}/picture?type=normal"
+            class="sidedrawer-header-image fa">
+        <Label class="sidedrawer-header-brand" text="{{username ||'User Name'}}"></Label>
+        <Label class="footnote" text="{{email}}"></Label>
+    </StackLayout>
+
+    <ScrollView row="1">
+        <StackLayout class="sidedrawer-content">
+            <MyDrawerItem title="Home" route="/home" icon="&#xf015;" [isSelected]="isPageSelected('Home')">
+            </MyDrawerItem>
+            <MyDrawerItem title="Browse" route="/browse" icon="&#xf1ea;" [isSelected]="isPageSelected('Browse')">
+            </MyDrawerItem>
+            <MyDrawerItem title="Search" route="/search" icon="&#xf002;" [isSelected]="isPageSelected('Search')">
+            </MyDrawerItem>
+            <MyDrawerItem title="Featured" route="/featured" icon="&#xf005;" [isSelected]="isPageSelected('Featured')">
+            </MyDrawerItem>
+
+            <StackLayout class="hr-light"></StackLayout>
+            
+            <MyDrawerItem title="Settings" route="/settings" icon="&#xf013;" [isSelected]="isPageSelected('Settings')">
+            </MyDrawerItem>
+            <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isSelected" (tap)="logout()">
+                <Label col="0" [text]="'&#xf060;'" class="fa"></Label>
+                <Label col="1" [text]="'Log Out'" class="p-r-10"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
