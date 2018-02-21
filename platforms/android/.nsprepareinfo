@@ -1,9 +1,9 @@
 {
-	"time": "Mon Feb 19 2018 19:56:10 GMT+0200 (GTB Standard Time)",
+	"time": "Mon Feb 19 2018 23:13:51 GMT+0200 (GTB Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": true,
 	"release": false,
-	"changesRequireBuild": false,
+	"changesRequireBuild": true,
 	"projectFileHash": "315864b1865a893080fe97facecf9b72b47e8a2a22a4bd036aaa20cfbaf0a1c3",
-	"changesRequireBuildTime": "Mon Feb 19 2018 19:41:01 GMT+0200 (GTB Standard Time)"
+	"changesRequireBuildTime": "Mon Feb 19 2018 23:13:51 GMT+0200 (GTB Standard Time)"
 }
