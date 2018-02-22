@@ -1,5 +1,0 @@
-demo/
-*.png
-*.log
-*.ts
-!*.d.ts

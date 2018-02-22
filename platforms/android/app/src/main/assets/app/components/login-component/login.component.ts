@@ -30,6 +30,145 @@ export class LoginComponent implements OnInit {
         }
     }
 
+    public login() {
+        console.log("login in");
+
+        if (this.input.email && this.input.password) {
+
+            firebase.login({
+                type: firebase.LoginType.PASSWORD,
+                passwordOptions: {
+                    email: this.input.email,
+                    password: this.input.password
+                }
+            })
+            .then(
+                result => {
+                    firebase.query( 
+                        firebase_result => {
+                            console.log("FIREBASE RESULT:");
+                            console.dir(firebase_result)
+                            if (!firebase_result['value']) {
+                                console.log("IN IF checkIfUserExists");
+                                // add code for saving the data to new user
+                                // this.createNewUser(fb_result, fb_access_token);
+                            } else {
+                                console.log("IN ELSE");
+                                for(var user_key in firebase_result.value){
+                                    // save user's data locally
+                                    ApplicationSettings.setString('user_key', user_key);
+                                    ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
+                                    // console.dir(firebase_result.value[user_key]);
+                                }
+                                console.dir(firebase_result.value[Object.keys(firebase_result.value)[0]])
+            
+                                let username = firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'];
+                                let email = firebase_result.value[Object.keys(firebase_result.value)[0]]['email'];
+                                
+                                this.appData.updateUser({
+                                    'is_loggedin': true,
+                                    'username':  firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'],
+                                    'email': firebase_result.value[Object.keys(firebase_result.value)[0]]['email'],
+                                });
+                                if (username)
+                                    ApplicationSettings.setString('username', username);
+                                if (email)
+                                    ApplicationSettings.setString('email', email);
+                            }
+                        },
+                        '/users',
+                        {
+                            singleEvent: true, // for checking if the value exists (return the whole data)
+                            orderBy: { // the property in each of the objects in which to perform the query 
+                                type: firebase.QueryOrderByType.CHILD,
+                                value: 'uid'
+                            },
+                            range: { // the comparison operator
+                                type: firebase.QueryRangeType.EQUAL_TO,
+                                value: result.uid
+                            },
+                            limit: { // limit to only return the first result
+                                type: firebase.QueryLimitType.FIRST, 
+                                value: 1
+                            }
+                        }
+                    );
+                    
+                    ApplicationSettings.setBoolean("authenticated", true);
+                    this.router.navigate(["/secure"], { clearHistory: true });
+                },
+                errorMessage => {
+                    (new SnackBar()).simple("Incorrect Credentials!");
+                }
+            );
+        }
+    }
+
+    public doLoginByGoogle(): void {
+        console.log("loggin in with GOOGLE!");
+        firebase.login({
+            // note that you need to enable Google auth in your firebase instance
+            type: firebase.LoginType.GOOGLE
+        }).then(
+            result => {
+                firebase.query( 
+                    firebase_result => {
+                        // console.log("FIREBASE RESULT:");
+                        // console.dir(firebase_result)
+                        if (!firebase_result['value']) {
+                            console.log("IN IF checkIfUserExists");
+                            // add code for saving the data to new user
+                            // this.createNewUser(fb_result, fb_access_token);
+                        } else {
+                            console.log("IN ELSE");
+                            for(var user_key in firebase_result.value){
+                                // save user's data locally
+                                ApplicationSettings.setString('user_key', user_key);
+                                ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
+                                // console.dir(firebase_result.value[user_key]);
+                            }
+                            console.dir(firebase_result.value[Object.keys(firebase_result.value)[0]])
+        
+                            let username = firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'];
+                            let email = firebase_result.value[Object.keys(firebase_result.value)[0]]['email'];
+                            
+                            this.appData.updateUser({
+                                'is_loggedin': true,
+                                'username':  firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'],
+                                'email': firebase_result.value[Object.keys(firebase_result.value)[0]]['email'],
+                            });
+                            if (username)
+                                ApplicationSettings.setString('username', username);
+                            if (email)
+                                ApplicationSettings.setString('email', email);
+                        }
+                    },
+                    '/users',
+                    {
+                        singleEvent: true, // for checking if the value exists (return the whole data)
+                        orderBy: { // the property in each of the objects in which to perform the query 
+                            type: firebase.QueryOrderByType.CHILD,
+                            value: 'uid'
+                        },
+                        range: { // the comparison operator
+                            type: firebase.QueryRangeType.EQUAL_TO,
+                            value: result.uid
+                        },
+                        limit: { // limit to only return the first result
+                            type: firebase.QueryLimitType.FIRST, 
+                            value: 1
+                        }
+                    }
+                );
+                ApplicationSettings.setBoolean("authenticated", true);
+                this.router.navigate(["/secure"], { clearHistory: true });
+            },
+            errorMessage => {
+                (new SnackBar()).simple("Incorrect Credentials!");
+            }
+        );
+    }
+
     public loginFB() {
         console.log("loggin in with FACEBOOK!");
         firebase.login({
@@ -42,8 +181,12 @@ export class LoginComponent implements OnInit {
         .then(
             (fb_result) => {
                 console.log("FB RESULT:");
-                // console.dir(fb_result);
-                var fb_access_token = fb_result.providers[1]['token'];
+                console.dir(JSON.stringify(fb_result));
+                let fbIndex = undefined;
+                fb_result.providers.forEach((elem,i) => {
+                    if (elem.id = "facebook.com") fbIndex = i
+                });
+                var fb_access_token = fb_result.providers[fbIndex]['token'];
 
                 this.checkIfUserExists(fb_result, fb_access_token);
                 ApplicationSettings.setBoolean("authenticated", true);
@@ -57,8 +200,8 @@ export class LoginComponent implements OnInit {
     }
 
     private checkIfUserExists(fb_result, fb_access_token) {
-        console.log("called checkIfUserExists");
-        console.dir(fb_result);
+        // console.log("called checkIfUserExists");
+        // console.dir(fb_result);
         firebase.query( 
             firebase_result => {
                 // console.log("FIREBASE RESULT:");
@@ -120,7 +263,8 @@ export class LoginComponent implements OnInit {
         var user_data = {
             'uid': fb_result.uid,
             'user_name': fb_result.name,
-            'profile_photo': fb_result.profileImageURL
+            'profile_photo': fb_result.profileImageURL,
+            'email': fb_result.email
         };
 
         this.appData.updateUser({
@@ -129,7 +273,7 @@ export class LoginComponent implements OnInit {
         });
         
         this.http.getFaceBookUserInfo(fb_access_token).subscribe( (r: any) => {
-                 console.dir(r);
+                //  console.dir(r);
                 user_data['id'] = r.id; // facebook user ID for this specific app
                 // console.log("facebook answer");
                 // console.dir(r);
@@ -152,59 +296,4 @@ export class LoginComponent implements OnInit {
          
         });
     }
-
-    public login() {
-        console.log("login in");
-        console.dir(this.input);
-        if (this.input.email && this.input.password) {
-
-            firebase.login({
-                type: firebase.LoginType.PASSWORD,
-                passwordOptions: {
-                    email: this.input.email,
-                    password: this.input.password
-                }
-            })
-            .then(
-                result => {
-                    ApplicationSettings.setBoolean("authenticated", true);
-                    this.router.navigate(["/secure"], { clearHistory: true });
-                },
-                errorMessage => {
-                    (new SnackBar()).simple("Incorrect Credentials!");
-                }
-            );
-        }
-    }
-
-    public doLoginByGoogle(): void {
-        console.log("loggin in with GOOGLE!");
-        firebase.login({
-            // note that you need to enable Google auth in your firebase instance
-            type: firebase.LoginType.GOOGLE
-        }).then(
-            result => {
-                ApplicationSettings.setBoolean("authenticated", true);
-                this.router.navigate(["/secure"], { clearHistory: true });
-            },
-            errorMessage => {
-                (new SnackBar()).simple("Incorrect Credentials!");
-            }
-        );
-      }
-
-    // public login() {
-    //     if(this.input.email && this.input.password) {
-    //         let account = JSON.parse(ApplicationSettings.getString("account", "{}"));
-    //         if(this.input.email == account.email && this.input.password == account.password) {
-    //             ApplicationSettings.setBoolean("authenticated", true);
-    //             this.router.navigate(["/secure"], { clearHistory: true });
-    //         } else {
-    //             (new SnackBar()).simple("Incorrect Credentials!");
-    //         }
-    //     } else {
-    //         (new SnackBar()).simple("All Fields Required!");
-    //     }
-    // }
-    //  
 }

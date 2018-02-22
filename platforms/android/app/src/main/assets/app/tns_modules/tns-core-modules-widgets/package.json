@@ -1,89 +1,41 @@
 {
   "_args": [
     [
-      {
-        "raw": "tns-core-modules-widgets@3.4.0",
-        "scope": null,
-        "escapedName": "tns-core-modules-widgets",
-        "name": "tns-core-modules-widgets",
-        "rawSpec": "3.4.0",
-        "spec": "3.4.0",
-        "type": "version"
-      },
-      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new\\node_modules\\tns-core-modules"
+      "tns-core-modules-widgets@3.4.0",
+      "/Users/mrfksiv/Documents/0.projects/shapp"
     ]
   ],
   "_from": "tns-core-modules-widgets@3.4.0",
   "_id": "tns-core-modules-widgets@3.4.0",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-PB+n9/hz6FCKqMtqhmsdgJMnkkU=",
   "_location": "/tns-core-modules-widgets",
-  "_nodeVersion": "8.9.2",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/tns-core-modules-widgets-3.4.0.tgz_1512647893231_0.631609009578824"
-  },
-  "_npmUser": {
-    "name": "tns-bot",
-    "email": "nativescript@telerik.com"
-  },
-  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
+    "type": "version",
+    "registry": true,
     "raw": "tns-core-modules-widgets@3.4.0",
-    "scope": null,
-    "escapedName": "tns-core-modules-widgets",
     "name": "tns-core-modules-widgets",
+    "escapedName": "tns-core-modules-widgets",
     "rawSpec": "3.4.0",
-    "spec": "3.4.0",
-    "type": "version"
+    "saveSpec": null,
+    "fetchSpec": "3.4.0"
   },
   "_requiredBy": [
     "/tns-core-modules"
   ],
   "_resolved": "https://registry.npmjs.org/tns-core-modules-widgets/-/tns-core-modules-widgets-3.4.0.tgz",
-  "_shasum": "3c1fa7f7f873e8508aa8cb6a866b1d8093279245",
-  "_shrinkwrap": null,
-  "_spec": "tns-core-modules-widgets@3.4.0",
-  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new\\node_modules\\tns-core-modules",
+  "_spec": "3.4.0",
+  "_where": "/Users/mrfksiv/Documents/0.projects/shapp",
   "author": {
     "name": "NativeScript team"
   },
   "bugs": {
     "url": "https://github.com/NativeScript/android-widgets/issues"
   },
-  "dependencies": {},
   "description": "Native widgets used in the NativeScript framework.",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-WEtjDRTjjKB+C1NhY1CJSNyhK9DPCYzBgM+yKgq5AmphK/QdQEMAP1U2ttOv8yWWfsvLZGOnzyLCzcyeoG0Gfw==",
-    "shasum": "3c1fa7f7f873e8508aa8cb6a866b1d8093279245",
-    "tarball": "https://registry.npmjs.org/tns-core-modules-widgets/-/tns-core-modules-widgets-3.4.0.tgz"
-  },
   "homepage": "https://github.com/NativeScript/android-widgets#readme",
   "license": "Apache-2.0",
-  "maintainers": [
-    {
-      "name": "tns-bot",
-      "email": "nativescript@telerik.com"
-    },
-    {
-      "name": "vchimev",
-      "email": "Vasil.Chimev@telerik.com"
-    },
-    {
-      "name": "hhristov",
-      "email": "hristo.hristov@outlook.com"
-    },
-    {
-      "name": "panayot.cankov",
-      "email": "panayot.cankov@telerik.com"
-    },
-    {
-      "name": "vakrilov",
-      "email": "alexander.vakrilov@gmail.com"
-    }
-  ],
   "name": "tns-core-modules-widgets",
   "nativescript": {
     "platforms": {
@@ -91,9 +43,6 @@
       "android": "3.0.0"
     }
   },
-  "optionalDependencies": {},
-  "readme": "[![Build Status](https://travis-ci.org/NativeScript/tns-core-modules-widgets.svg?branch=master)](https://travis-ci.org/NativeScript/tns-core-modules-widgets)\n\n# Widgets\nContains the source code of the `tns-core-modules-widgets` library.\nThis library contains native code (Java and Objective-C) used by the NativeScript core modules `tns-core-modules`.\n\n## How to Build\nOn Mac in the root folder run:\n```\n./build.sh\n```\nThis will run Android and iOS build and pack `dist/tns-core-modules-widgets-*.tgz`.\n\n## How to Build Android\nIn the `android` folder run:\n```\ngradle build\n```\nThis will output `android/build/widgets-release.aar`.\n\n## How to Build iOS\nOn Mac in the `ios` folder under mac run:\n```\n./build.sh\n```\nThis will output `ios/build/TNSWidgets.framework`.\n\n",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NativeScript/android-widgets.git"

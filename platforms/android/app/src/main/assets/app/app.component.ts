@@ -7,8 +7,8 @@ import * as ApplicationSettings from 'application-settings';
 import { HttpService } from './http.service';
 
 import { GlobalVars } from './shared/global-vars';
-import { AppData } from './shared/app-data';
 import { AppDataService } from "./shared/appdata.service";
+
 @Component({
     selector: "ns-app",
     templateUrl: "app.component.html",
@@ -25,10 +25,10 @@ export class AppComponent implements OnInit{
             iOSEmulatorFlush: true,
             
             onAuthStateChanged: (data) => {
-                console.log('LALALAL');
-                console.dir(data)
+                // console.log('onAuthStateChanged');
+                // console.dir(data)
                 if (data && data.user) {
-                    console.log("IN IF onAuthStateChanged");
+                    // console.log("IN IF onAuthStateChanged");
 
                     this.appData.updateUser({
                         'is_loggedin': true,
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit{
 
                     // this.getFacebookFriends();
                 }
-                console.dir(this.appData.user);
+                // console.dir(this.appData.user);
             }
         })
         .then(

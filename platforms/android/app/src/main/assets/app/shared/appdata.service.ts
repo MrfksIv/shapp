@@ -18,8 +18,8 @@ export class AppDataService {
                 this.user[key] = obj[key];
             }
         }
-        console.log("UPDATED USER AppDataService:")
-        console.dir(this.user)
+        // console.log("UPDATED USER AppDataService:")
+        // console.dir(this.user)
         this.userInfoSubject.next(this.user);
     }
 

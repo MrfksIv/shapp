@@ -35,8 +35,8 @@ export class MyDrawerComponent implements OnInit {
         
         this.userInfoSubscription = this.appData.getUserInfo()
         .subscribe( userInfo => {           
-            console.log("RECEIVED INFO AT DRAWER!");
-            console.dir(userInfo);
+            // console.log("RECEIVED INFO AT DRAWER!");
+            // console.dir(userInfo);
             const user_key = ApplicationSettings.getString('user_key');
             let user = ApplicationSettings.getString('user');
     

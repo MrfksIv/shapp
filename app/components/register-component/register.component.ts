@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 import { Location } from "@angular/common";
 import { SnackBar } from "nativescript-snackbar";
 
+import { AppDataService } from '../../shared/appdata.service';
+
 import * as ApplicationSettings from "application-settings";
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -14,7 +16,8 @@ export class RegisterComponent {
 
     public input: any;
 
-    public constructor(private location: Location) {
+    public constructor(private location: Location, private appData: AppDataService) {
+
         this.input = {
             "firstname": "",
             "lastname": "",
@@ -30,8 +33,34 @@ export class RegisterComponent {
             firebase.createUser({email: this.input.email, password:this.input.password})
             .then(
                 onfulfilled => {
-                    console.log("CREATE USER SUCCESS!");
-                    console.dir(onfulfilled);
+                    var user_data = {
+                        'uid': onfulfilled.key,
+                        'user_name': `${this.input.firstname} ${this.input.lastname}`,
+                        'email': this.input.email
+                    };
+                    
+                    firebase.push(
+                        '/users',
+                        user_data
+                      ).then(
+                        (result) => {
+                            
+                            console.log("REGISTER PUSH RESULT:");
+                            console.dir(result);
+                            var user = {};
+                            user[result.key] = user_data; // the key is the property containing the user's data
+                            // store user's data locally
+                            ApplicationSettings.setString('user_key', result.key);
+                            ApplicationSettings.setString('user', JSON.stringify(user));
+                            
+                            
+                            this.appData.updateUser({
+                                'is_loggedin': true,
+                                'username':  user_data['user_name'],
+                                'email': user_data['email']
+                            });
+                        }
+                      );
                 },
                 onrejected => {
                     console.log("CREATE USER FAILED!");

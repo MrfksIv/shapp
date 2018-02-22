@@ -1,50 +1,33 @@
 {
   "_args": [
     [
-      {
-        "raw": "@angular/router@~5.2.0",
-        "scope": "@angular",
-        "escapedName": "@angular%2frouter",
-        "name": "@angular/router",
-        "rawSpec": "~5.2.0",
-        "spec": ">=5.2.0 <5.3.0",
-        "type": "range"
-      },
-      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new"
+      "@angular/router@5.2.5",
+      "/Users/mrfksiv/Documents/0.projects/shapp"
     ]
   ],
-  "_from": "@angular/router@~5.2.0",
-  "_hasShrinkwrap": false,
+  "_from": "@angular/router@5.2.5",
   "_id": "@angular/router@5.2.5",
+  "_inBundle": false,
+  "_integrity": "sha1-+PIg1fuF/BDWD+YGsPKmRzImUUI=",
   "_location": "/@angular/router",
-  "_nodeVersion": "8.9.2",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/router_5.2.5_1518585894043_0.13271757343502655"
-  },
-  "_npmUser": {
-    "name": "angular",
-    "email": "devops+npm@angular.io"
-  },
-  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/router@~5.2.0",
-    "scope": "@angular",
-    "escapedName": "@angular%2frouter",
+    "type": "version",
+    "registry": true,
+    "raw": "@angular/router@5.2.5",
     "name": "@angular/router",
-    "rawSpec": "~5.2.0",
-    "spec": ">=5.2.0 <5.3.0",
-    "type": "range"
+    "escapedName": "@angular%2frouter",
+    "scope": "@angular",
+    "rawSpec": "5.2.5",
+    "saveSpec": null,
+    "fetchSpec": "5.2.5"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/@angular/router/-/router-5.2.5.tgz",
-  "_shasum": "f8f220d5fb85fc10d60fe606b0f2a64732265142",
-  "_shrinkwrap": null,
-  "_spec": "@angular/router@~5.2.0",
-  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new",
+  "_spec": "5.2.5",
+  "_where": "/Users/mrfksiv/Documents/0.projects/shapp",
   "author": {
     "name": "angular"
   },
@@ -55,15 +38,6 @@
     "tslib": "^1.7.1"
   },
   "description": "Angular - the routing library",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-I8U0iy59lz0dAxU4zxRQHagfUPWF+MikLNMirRL1lrA49PG+5K1tiuIQ6p+8fZFAJ5UXwNHyXqYuWqsKRiVBHQ==",
-    "shasum": "f8f220d5fb85fc10d60fe606b0f2a64732265142",
-    "tarball": "https://registry.npmjs.org/@angular/router/-/router-5.2.5.tgz",
-    "fileCount": 70,
-    "unpackedSize": 2813228
-  },
   "es2015": "./esm2015/router.js",
   "homepage": "https://github.com/angular/angular/tree/master/packages/router",
   "keywords": [
@@ -72,23 +46,14 @@
   ],
   "license": "MIT",
   "main": "./bundles/router.umd.js",
-  "maintainers": [
-    {
-      "name": "angular",
-      "email": "devops+npm@angular.io"
-    }
-  ],
   "module": "./esm5/router.js",
   "name": "@angular/router",
-  "optionalDependencies": {},
   "peerDependencies": {
     "@angular/core": "5.2.5",
     "@angular/common": "5.2.5",
     "@angular/platform-browser": "5.2.5",
     "rxjs": "^5.5.0"
   },
-  "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
