@@ -111,12 +111,36 @@ export class LoginComponent implements OnInit {
             type: firebase.LoginType.GOOGLE
         }).then(
             result => {
+                console.log("GOOGLE AUTH RESULT:");
+                console.dir(result)
+
                 firebase.query( 
                     firebase_result => {
-                        // console.log("FIREBASE RESULT:");
-                        // console.dir(firebase_result)
+                        console.log("GOOGLE FIREBASE RESULT:");
+                        console.dir(firebase_result)
                         if (!firebase_result['value']) {
                             console.log("IN IF checkIfUserExists");
+                            var user_data = {
+                                'uid': result.uid,
+                                'user_name': result.name,
+                                'profile_photo': result.profileImageURL,
+                                'email': result.email
+                            };
+                            firebase.push(
+                                '/users',
+                                user_data
+                              ).then(
+                                function (result) {
+                                   
+                                  var user = {};
+                                  user[result.key] = user_data; // the key is the property containing the user's data
+                                  // store user's data locally
+                                  ApplicationSettings.setString('user_key', result.key);
+                                  ApplicationSettings.setString('user', JSON.stringify(user));
+                                  // console.dir(user);
+                                }
+                              );
+                              this.appData.updateUser(user_data);
                             // add code for saving the data to new user
                             // this.createNewUser(fb_result, fb_access_token);
                         } else {
@@ -208,6 +232,7 @@ export class LoginComponent implements OnInit {
                 // console.dir(firebase_result)
                 if (!firebase_result['value']) {
                     console.log("IN IF checkIfUserExists");
+                    
                     // add code for saving the data to new user
                     this.createNewUser(fb_result, fb_access_token);
                 } else {

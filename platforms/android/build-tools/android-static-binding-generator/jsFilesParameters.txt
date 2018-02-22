@@ -13,7 +13,6 @@ C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\ass
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\item.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\item.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\items.component.js
-C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\app-data.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\appdata.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\global-vars.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\shared.module.js
