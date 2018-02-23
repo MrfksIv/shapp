@@ -4,11 +4,11 @@ Feel free to customize layouts and components to change how your app drawer look
 -->
 <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left">
     <StackLayout row="0" class="sidedrawer-header">
-        <Label visibility="{{userID ? 'collapse' : 'visible'}}" class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
+        <Label visibility="{{imageURL ? 'collapse' : 'visible'}}" class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
         
         <img 
-            visibility="{{userID ? 'visible' : 'collapse'}}"
-            src="https://graph.facebook.com/{{userID}}/picture?type=normal"
+            visibility="{{imageURL ? 'visible' : 'collapse'}}"
+            src="{{imageURL}}"
             class="sidedrawer-header-image fa">
         <Label class="sidedrawer-header-brand" text="{{username ||'User Name'}}"></Label>
         <Label class="footnote" text="{{email}}"></Label>

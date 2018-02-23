@@ -24,10 +24,12 @@ export class MyDrawerComponent implements OnInit {
     * You can check how it is used in the "isPageSelected" function below.
     *************************************************************/
     @Input() selectedPage: string;
-    userID: string;
+    userFacebookID: string;
     username: string;
     email: string;
     userInfoSubscription: Subscription;
+    imageURL: string;
+    profile_photo_URL: string;
 
     constructor(private router: RouterExtensions, private appData: AppDataService) {
 
@@ -35,16 +37,17 @@ export class MyDrawerComponent implements OnInit {
         
         this.userInfoSubscription = this.appData.getUserInfo()
         .subscribe( userInfo => {           
-            // console.log("RECEIVED INFO AT DRAWER!");
-            // console.dir(userInfo);
+            console.log("RECEIVED INFO AT DRAWER!");
+            console.dir(userInfo);
             const user_key = ApplicationSettings.getString('user_key');
             let user = ApplicationSettings.getString('user');
     
             this.username = userInfo.username || ApplicationSettings.getString('username');
             this.email = userInfo.email || ApplicationSettings.getString('email');
-            this.userID = userInfo.fbID || ApplicationSettings.getString('fbID');
-
+            this.userFacebookID = userInfo.fbID || ApplicationSettings.getString('fbID');
+            this.profile_photo_URL = userInfo.profile_photo || ApplicationSettings.getString('profile_photo');               
            
+            this.prepareImageURL();
         });
     }
 
@@ -65,6 +68,14 @@ export class MyDrawerComponent implements OnInit {
 
     //https://graph.facebook.com/867374123424597/picture?type=normal
 
+    public prepareImageURL() {
+        if (this.userFacebookID) {
+            this.imageURL = `https://graph.facebook.com/${this.userFacebookID}/picture?type=normal`;
+        } else if (this.profile_photo_URL) {
+            this.imageURL = this.profile_photo_URL;
+        }
+        
+    }
     
     public logout() {
         firebase.logout();

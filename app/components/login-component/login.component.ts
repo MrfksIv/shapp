@@ -145,10 +145,12 @@ export class LoginComponent implements OnInit {
                             // this.createNewUser(fb_result, fb_access_token);
                         } else {
                             console.log("IN ELSE");
+                            console.dir(firebase_result);
                             for(var user_key in firebase_result.value){
                                 // save user's data locally
                                 ApplicationSettings.setString('user_key', user_key);
                                 ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
+                                ApplicationSettings.setString('profile_photo', JSON.stringify(firebase_result.value[user_key]['profile_photo']))
                                 // console.dir(firebase_result.value[user_key]);
                             }
                             console.dir(firebase_result.value[Object.keys(firebase_result.value)[0]])
@@ -160,6 +162,7 @@ export class LoginComponent implements OnInit {
                                 'is_loggedin': true,
                                 'username':  firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'],
                                 'email': firebase_result.value[Object.keys(firebase_result.value)[0]]['email'],
+                                'profile_photo': firebase_result.value[Object.keys(firebase_result.value)[0]]['profile_photo']
                             });
                             if (username)
                                 ApplicationSettings.setString('username', username);
