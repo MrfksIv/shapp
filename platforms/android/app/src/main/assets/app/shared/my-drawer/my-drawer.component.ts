@@ -32,9 +32,6 @@ export class MyDrawerComponent implements OnInit {
     profile_photo_URL: string;
 
     constructor(private router: RouterExtensions, private appData: AppDataService) {
-
-        
-        
         this.userInfoSubscription = this.appData.getUserInfo()
         .subscribe( userInfo => {           
             console.log("RECEIVED INFO AT DRAWER!");

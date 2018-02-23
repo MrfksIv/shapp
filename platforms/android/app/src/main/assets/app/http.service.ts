@@ -19,4 +19,8 @@ export class HttpService {
     getFacebookFriends(token) {
         return this.http.get(`${this.FB_URL}/friends?access_token=${token}`).map( (res:Response) => res);
     }
+
+    getFacebookProfilePic(token) {
+        
+    }
 }

@@ -13,7 +13,9 @@ const routes: Routes = [
     { path: "", redirectTo: "/login", pathMatch: "full" },
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
-    { path: "secure", component: SecureComponent }
+    { path: "secure", component: SecureComponent },
+    { path: "lists", loadChildren: './list/list.module#ListModule' },
+    { path: "friends", loadChildren: './friends/friends.module#FriendsModule' }
 ];
 
 

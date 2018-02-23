@@ -7,6 +7,8 @@ import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 import { SharedModule } from './shared/shared.module';
+import { ListModule } from './list/list.module';
+import { FriendsModule } from './friends/friends.module';
 
 import { ItemService } from "./item/item.service";
 import { HttpService } from "./http.service";
@@ -32,8 +34,10 @@ import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/a
         NativeScriptFormsModule,
         AppRoutingModule,
         NativeScriptUISideDrawerModule,
+        NativeScriptHttpClientModule,
         SharedModule,
-        NativeScriptHttpClientModule
+        ListModule,
+        FriendsModule   
     ],
     declarations: [
         AppComponent,

@@ -150,8 +150,10 @@ export class LoginComponent implements OnInit {
                                 // save user's data locally
                                 ApplicationSettings.setString('user_key', user_key);
                                 ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
-                                ApplicationSettings.setString('profile_photo', JSON.stringify(firebase_result.value[user_key]['profile_photo']))
-                                // console.dir(firebase_result.value[user_key]);
+                                if (firebase_result.value[user_key]['profile_photo']) {
+                                    ApplicationSettings.setString('profile_photo', firebase_result.value[user_key]['profile_photo'])
+                                }
+                                    // console.dir(firebase_result.value[user_key]);
                             }
                             console.dir(firebase_result.value[Object.keys(firebase_result.value)[0]])
         
