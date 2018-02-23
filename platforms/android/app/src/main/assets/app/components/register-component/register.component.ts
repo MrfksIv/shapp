@@ -61,10 +61,19 @@ export class RegisterComponent {
                             });
                         }
                       );
+                
+                    firebase.sendEmailVerification().then(
+                     () => {
+                          (new SnackBar()).simple("Email verification sent. Please check your mail.");
+                        },
+                    (error) => {
+                          (new SnackBar()).simple("An error occurred while sending your verification email.");
+                        }
+                    );
                 },
                 onrejected => {
                     console.log("CREATE USER FAILED!");
-                    console.dir(onrejected);
+                    (new SnackBar()).simple(onrejected.replace("com.google.firebase.auth.FirebaseAuthUserCollisionException: ", ""));
                 }
             );
 
