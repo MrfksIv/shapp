@@ -9,10 +9,16 @@ C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\ass
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\login-component\login.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\register-component\register.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\secure-component\secure.component.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\friends\friends-routing.module.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\friends\friends.module.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\friends\friends-component\friends.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\item-detail.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\item.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\item.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\items.component.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list-routing.module.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list.module.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list-component\list.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\appdata.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\global-vars.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\shared.module.js
@@ -114,6 +120,10 @@ C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\ass
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\scripts\postinstall.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-pro-ui\scripts\eula-prompt.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-ui-listview\ui-listview.common.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-ui-listview\ui-listview.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-ui-listview\hooks\after-prepare\nativescript-unit-test-runner.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\nativescript-ui-listview\hooks\before-livesync\nativescript-angular-sync.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\tns_modules\tns-core-modules\application\application.js

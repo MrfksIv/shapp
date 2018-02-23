@@ -1,0 +1,141 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-ui-listview",
+        "scope": null,
+        "escapedName": "nativescript-ui-listview",
+        "name": "nativescript-ui-listview",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new"
+    ]
+  ],
+  "_from": "nativescript-ui-listview@latest",
+  "_id": "nativescript-ui-listview@3.5.0",
+  "_inCache": true,
+  "_location": "/nativescript-ui-listview",
+  "_nodeVersion": "6.12.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-ui-listview_3.5.0_1519313800068_0.3109094786871085"
+  },
+  "_npmUser": {
+    "name": "tns-bot",
+    "email": "nativescript@telerik.com"
+  },
+  "_npmVersion": "4.6.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-ui-listview",
+    "scope": null,
+    "escapedName": "nativescript-ui-listview",
+    "name": "nativescript-ui-listview",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-ui-listview/-/nativescript-ui-listview-3.5.0.tgz",
+  "_shasum": "63b2e7fef464608af363853f0c3d111821bd00d4",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-ui-listview",
+  "_where": "C:\\Users\\mrfksiv\\Documents\\Projects\\shapp_new",
+  "author": {
+    "name": "NativeScript Team",
+    "email": "nativescriptplugins@progress.com"
+  },
+  "bootstrapper": "nativescript-plugin-seed",
+  "bugs": {
+    "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
+  },
+  "dependencies": {
+    "nativescript-ui-core": "^1.0.0"
+  },
+  "description": "This repository contains the source code for the nativescript-ui-listview plugin. A powerful data list control implementing a bunch of features native to the mobile world as item animations, pull-to-refresh, item layouts, load-on-demand, swipe-to-execute, etc.",
+  "devDependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/router": "^5.0.0",
+    "nativescript-angular": "^5.0.0",
+    "prompt": "^1.0.0",
+    "rimraf": "^2.5.0",
+    "rxjs": "^5.5.0",
+    "tns-core-modules": "^3.4.0",
+    "tns-platform-declarations": "^3.4.0",
+    "tslint": "^5.0.0",
+    "typescript": "~2.4.2",
+    "zone.js": "^0.8.4"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "63b2e7fef464608af363853f0c3d111821bd00d4",
+    "tarball": "https://registry.npmjs.org/nativescript-ui-listview/-/nativescript-ui-listview-3.5.0.tgz",
+    "fileCount": 71,
+    "unpackedSize": 4691087
+  },
+  "homepage": "https://github.com/telerik/nativescript-ui-feedback",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "main": "ui-listview",
+  "maintainers": [
+    {
+      "name": "tns-bot",
+      "email": "nativescript@telerik.com"
+    }
+  ],
+  "name": "nativescript-ui-listview",
+  "nativescript": {
+    "platforms": {
+      "android": "3.4.0",
+      "ios": "3.4.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "# NativeScript UI ListView\n\n- [Overview](#overview)\n- [Installation](#installation)\n- [Documentation](#documentation)\n- [API Reference](#api-reference)\n- [Sample Apps](#sample-apps)\n\n\n## Overview\n\n**NativeScript UI ListView** is part of [Progress NativeScript UI](https://www.nativescript.org/ui-for-nativescript) - a suite of rich-UI components targeting the NativeScript platform.\n\nThe **NativeScript UI ListView** plugin is a virtualizing list component that provides the most popular features associated with scenarios where a list of items is used. All these features are embedded in one control with the idea to save developer time and provide better experience. The main features include:\n\n* Item animations\n* Different layouts and orientations\n* Smart defaults for many gestures - select on long press, execution of special action on swipe, reorder of items on long press and drag, refreshing the list on swipe or loading more items only when needed.\n\n<img src=\"https://docs.nativescript.org/img/ui-for-nativescript/listview-ios.png\"><img src=\"https://docs.nativescript.org/img/ui-for-nativescript/listview-android.png\">\n\n## Installation\n\nIn Command prompt / Terminal navigate to your application root folder and run:\n\n```\ntns plugin add nativescript-ui-listview\n```\n\n## Documentation\n\nMore information is available in the Guides for [NativeScript Core](http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/ListView/overview) and [NativeScript with Angular](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/ListView/overview).\n\n## API Reference\n\n[Here](http://docs.telerik.com/devtools/nativescript-ui/api/classes/radlistview.html) is the API Reference section.\n\n## Sample Apps\n\nThe features of the plugin are demonstrated in the Sample apps for [NativeScript Core](https://github.com/telerik/nativescript-ui-samples) and [NativeScript with Angular](https://github.com/telerik/nativescript-ui-samples-angular).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telerik/nativescript-ui-feedback.git"
+  },
+  "scripts": {
+    "build": "npm i && tsc",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
+    "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
+    "demo.angular.android": "npm i && npm run tsc && cd ../demo-angular && tns run android --syncAllFiles",
+    "demo.angular.ios": "npm i && npm run tsc && cd ../demo-angular && tns run ios --syncAllFiles",
+    "demo.angular.reset": "cd ../demo-angular && rimraf platforms",
+    "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
+    "demo.reset": "cd ../demo && rimraf platforms",
+    "ngc": "node --max-old-space-size=8192 ./node_modules/.bin/ngc -p tsconfig.json",
+    "pack": "npm run prepare && bash ../publish/pack.sh",
+    "plugin.link": "npm link && cd ../demo && npm link nativescript-ui-listview && cd ../src",
+    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-ui-listview && tns plugin add ../src",
+    "plugin.tscwatch": "npm run tsc -- -w",
+    "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
+    "prepare": "npm run ngc",
+    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
+    "tsc": "tsc -skipLibCheck",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
+  },
+  "typings": "index.d.ts",
+  "version": "3.5.0"
+}
