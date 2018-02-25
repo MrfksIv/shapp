@@ -6,6 +6,8 @@ C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\ass
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\main.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\vendor-platform.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\vendor.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\classes\dataitem.class.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\classes\mock-dataitems.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\login-component\login.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\register-component\register.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\components\secure-component\secure.component.js
@@ -18,6 +20,8 @@ C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\ass
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\item\items.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list-routing.module.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list.module.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list.service.js
+C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\lists.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\list\list-component\list.component.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\appdata.service.js
 C:\Users\mrfksiv\Documents\Projects\shapp_new\platforms\android\app\src\main\assets\app\shared\global-vars.js

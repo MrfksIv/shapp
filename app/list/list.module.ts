@@ -7,6 +7,8 @@ import { ListRoutingModule } from "./list-routing.module";
 import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
 import { ListService } from "./list.service";
+import { ListsService } from "./lists.service";
+
 @NgModule({
     imports: [
         NativeScriptCommonModule,
@@ -19,7 +21,8 @@ import { ListService } from "./list.service";
         ListComponent
     ],
     providers: [
-        ListService
+        ListService,
+        ListsService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

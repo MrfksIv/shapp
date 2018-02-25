@@ -8,6 +8,7 @@
     "@angular/platform-browser": true,
     "@angular/platform-browser-dynamic": true,
     "@angular/router": true,
+    "moment": true,
     "nativescript-angular": true,
     "nativescript-fontawesome": true,
     "nativescript-oauth": true,

@@ -4,7 +4,6 @@ import { SnackBar } from 'nativescript-snackbar';
 
 import * as ApplicationSettings from 'application-settings';
 import * as firebase from 'nativescript-plugin-firebase';
-import * as tnsOAuthModule from 'nativescript-oauth';
 
 import { HttpService } from '../../http.service';
 import { AppDataService } from "../../shared/appdata.service";
@@ -58,6 +57,7 @@ export class LoginComponent implements OnInit {
                                     // save user's data locally
                                     ApplicationSettings.setString('user_key', user_key);
                                     ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
+                                    ApplicationSettings.setString('uid', firebase_result.value[user_key]['uid']);
                                     // console.dir(firebase_result.value[user_key]);
                                 }
                                 console.dir(firebase_result.value[Object.keys(firebase_result.value)[0]])
@@ -137,6 +137,7 @@ export class LoginComponent implements OnInit {
                                   // store user's data locally
                                   ApplicationSettings.setString('user_key', result.key);
                                   ApplicationSettings.setString('user', JSON.stringify(user));
+                                  ApplicationSettings.setString('uid', user_data.uid);
                                   // console.dir(user);
                                 }
                               );
@@ -150,6 +151,7 @@ export class LoginComponent implements OnInit {
                                 // save user's data locally
                                 ApplicationSettings.setString('user_key', user_key);
                                 ApplicationSettings.setString('user', JSON.stringify(firebase_result.value[user_key]));
+                                ApplicationSettings.setString('uid', result.uid);
                                 if (firebase_result.value[user_key]['profile_photo']) {
                                     ApplicationSettings.setString('profile_photo', firebase_result.value[user_key]['profile_photo'])
                                 }
@@ -254,6 +256,7 @@ export class LoginComponent implements OnInit {
                     let username = firebase_result.value[Object.keys(firebase_result.value)[0]]['user_name'];
                     let email = firebase_result.value[Object.keys(firebase_result.value)[0]]['email'];
                     let fbID = firebase_result.value[Object.keys(firebase_result.value)[0]]['id'];
+                    let uid = firebase_result.value[Object.keys(firebase_result.value)[0]]['uid'];
                     
                     this.appData.updateUser({
                         'is_loggedin': true,
@@ -267,6 +270,8 @@ export class LoginComponent implements OnInit {
                         ApplicationSettings.setString('username', username);
                     if (email)
                         ApplicationSettings.setString('email', email);
+                    if (uid)
+                        ApplicationSettings.setString('uid', uid);
                 }
             },
             '/users',

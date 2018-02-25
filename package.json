@@ -25,6 +25,7 @@
     "@angular/platform-browser": "~5.2.0",
     "@angular/platform-browser-dynamic": "~5.2.0",
     "@angular/router": "~5.2.0",
+    "moment": "^2.20.1",
     "nativescript-angular": "~5.2.0",
     "nativescript-fontawesome": "^1.0.0",
     "nativescript-oauth": "^2.0.1",

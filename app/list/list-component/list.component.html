@@ -25,13 +25,21 @@
     Use the tkMainContent directive to display the content of the page when you have an app drawer.
     -->
     <GridLayout tkExampleTitle tkToggleNavButton tkMainContent>
-        <RadListView [items]="dataItems">
-            <ng-template tkListItemTemplate let-item="item">
-                <StackLayout orientation="vertical">
-                    <Label class="nameLabel" [text]="item.name"></Label>
-                    <Label class="descriptionLabel" [text]="item.description"></Label>
-                </StackLayout>
-            </ng-template>
-        </RadListView>
+        <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
+            <StackLayout orientation="horizontal">
+                <Button class="menu-button" text="Check uid" (tap)="check()"></Button>
+                <Button class="menu-button" text="Add List" (tap)="addList()"></Button>
+                <Button class="menu-button" text="Get Lists" (tap)="getLists()"></Button>
+            </StackLayout>
+            <RadListView [items]="lists" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" row="1">
+                <ng-template tkListItemTemplate let-item="item">
+                    <StackLayout orientation="vertical">
+                        <Label class="nameLabel" [text]="item.description"></Label>
+                        <Label class="descriptionLabel" [text]="item.dateCreated"></Label>
+                    </StackLayout>
+                </ng-template>
+            </RadListView>
+        </GridLayout>   
     </GridLayout>
+
 </RadSideDrawer>

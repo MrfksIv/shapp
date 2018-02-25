@@ -20,6 +20,7 @@ import { LoginComponent } from "./components/login-component/login.component";
 import { RegisterComponent } from "./components/register-component/register.component";
 import { SecureComponent } from "./components/secure-component/secure.component";
 import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
+
 // import { RadSideDrawerComponent } from "nativescript-pro-ui/sidedrawer/angular";
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
