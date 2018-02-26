@@ -5,9 +5,10 @@ import { DrawerTransitionBase, SlideInOnTopTransition, RadSideDrawer } from "nat
 import { RadSideDrawerComponent } from "nativescript-pro-ui/sidedrawer/angular";
 import { RadListViewComponent } from "nativescript-pro-ui/listview/angular";
 import { TextField } from "ui/text-field";
+import { View } from "tns-core-modules/ui/core/view";
+import { layout } from "tns-core-modules/utils/utils";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
-import * as timerModule from 'tns-core-modules/timer';
-import * as Application from "tns-core-modules/application";
+// import * as Application from "tns-core-modules/application";
 import { Subscription } from 'rxjs/Subscription';
 
 import * as ApplicationSettings from 'application-settings';
@@ -30,15 +31,19 @@ var posts = require('../posts.json');
 @Component({
     moduleId: module.id,
     selector: 'ns-list',
-    providers: [ListService],
     templateUrl: 'list.component.html',
     styleUrls: ['list.component.css']
 })
 export class ListComponent implements OnInit {
-    @ViewChild("drawer") drawerComponent: RadSideDrawerComponent;
-    @ViewChild("listview") listViewComponent: RadListViewComponent;
-    @ViewChild("groceryTextField") groceryTextField: ElementRef;
 
+    @ViewChild("drawer") drawerComponent: RadSideDrawerComponent;
+    @ViewChild("groceryTextField") groceryTextField: ElementRef;
+    @ViewChild("myListView") listViewComponent: RadListViewComponent;
+
+    private leftItem: View;
+    private rightItem: View;
+    private mainView: View;
+    private animationApplied = false;
     private _sideDrawerTransition: DrawerTransitionBase;
     private _dataItems: ObservableArray<DataItem>;
     public _lists: Array<List>;
@@ -49,7 +54,10 @@ export class ListComponent implements OnInit {
     rand: number = 0;
     
 
-    constructor(private router: RouterExtensions, private listService: ListService, private listsService: ListsService){
+    constructor(private router: RouterExtensions, 
+                private listService: ListService,
+                private listsService: ListsService,
+                private appData: AppDataService){
         this.getLists();
     }
 
@@ -74,15 +82,6 @@ export class ListComponent implements OnInit {
         this._dataItems = new ObservableArray(this.listService.getDataItems());
     }
 
-    // Prevent the first textfield from receiving focus on Android
-    // See http://stackoverflow.com/questions/5056734/android-force-edittext-to-remove-focus
-    handleAndroidFocus(textField, container) {
-        if (container.android) {
-        container.android.setFocusableInTouchMode(true);
-        container.android.setFocusable(true);
-        textField.android.clearFocus();
-        }
-    }
 
     get sideDrawerTransition(): DrawerTransitionBase {
         return this._sideDrawerTransition;
@@ -100,21 +99,9 @@ export class ListComponent implements OnInit {
         this.drawerComponent.sideDrawer.showDrawer();
     }
 
-    public onPullToRefreshInitiatedExample(args: ListViewEventData) {
-        var that = new WeakRef(this);
-        timerModule.setTimeout( () => {
-            const initialNumberOfItems = that.get()._numberOfAddedItems;
-            for (let i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
-                if (i > posts.names.length - 1) {
-                    break;
-                }
-                const imageUri = Application.android ? posts.images[i].toLowerCase() : posts.images[i];
-                that.get()._dataItems.splice(0, 0, new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
-                that.get()._numberOfAddedItems++;
-            }
-            var listView = args.object;
-            listView.notifyPullToRefreshFinished();
-        }, 1000);
+    goToList(listkey: string) {
+        this.appData.setActiveList(listkey);
+        this.router.navigate(["/list-item"]);
     }
 
     public onPullToRefreshInitiated(args: ListViewEventData) {
@@ -149,7 +136,7 @@ export class ListComponent implements OnInit {
 
         this._lists.unshift(list);
 
-        this.listsService.createNewList(ApplicationSettings.getString('uid'), this.listDescription)
+        this.listsService.createNewList(list)
         .then((result) => {
                 console.log("saved!");
                 console.dir(result);
@@ -193,6 +180,75 @@ export class ListComponent implements OnInit {
     }
     private hideActivityIndicator() {
         this.isLoading = false;
+    }
+    public onCellSwiping(args: ListViewEventData) {
+        var swipeLimits = args.data.swipeLimits;
+        var swipeView = args['swipeView'];
+        this.mainView = args['mainView'];
+        // this.leftItem = swipeView.getViewById('left-stack');
+        this.rightItem = swipeView.getViewById('right-stack');
+
+        if (args.data.x > 0) {
+            var leftDimensions = View.measureChild(
+                <View>this.leftItem.parent,
+                this.leftItem,
+                layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
+                layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
+            View.layoutChild(<View>this.leftItem.parent, this.leftItem, 0, 0, leftDimensions.measuredWidth, leftDimensions.measuredHeight);
+            this.hideOtherSwipeTemplateView("left");
+        } else {
+            var rightDimensions = View.measureChild(
+                <View>this.rightItem.parent,
+                this.rightItem,
+                layout.makeMeasureSpec(Math.abs(args.data.x), layout.EXACTLY),
+                layout.makeMeasureSpec(this.mainView.getMeasuredHeight(), layout.EXACTLY));
+
+            View.layoutChild(<View>this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth() - rightDimensions.measuredWidth, 0, this.mainView.getMeasuredWidth(), rightDimensions.measuredHeight);
+            this.hideOtherSwipeTemplateView("right");
+        }
+    }
+
+    private hideOtherSwipeTemplateView(currentSwipeView: string) {
+        switch (currentSwipeView) {
+            case "left":
+                if (this.rightItem.getActualSize().width != 0) {
+                    View.layoutChild(<View>this.rightItem.parent, this.rightItem, this.mainView.getMeasuredWidth(), 0, this.mainView.getMeasuredWidth(), 0);
+                }
+                break;
+            case "right":
+                if (this.leftItem.getActualSize().width != 0) {
+                    View.layoutChild(<View>this.leftItem.parent, this.leftItem, 0, 0, 0, 0);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    public onSwipeCellStarted(args: ListViewEventData) {
+        var swipeLimits = args.data.swipeLimits;
+        swipeLimits.threshold = args['mainView'].getMeasuredWidth() * 0.2; // 20% of whole width
+        swipeLimits.left = swipeLimits.right = args['mainView'].getMeasuredWidth() * 0.65 // 65% of whole width
+    }
+    // << angular-listview-swipe-action-multiple-limits
+
+    public onSwipeCellFinished(args: ListViewEventData) {
+        if (args.data.x > 200) {
+            console.log("Perform left action");
+        } else if (args.data.x < -200) {
+            console.log("Perform right action");
+        }
+        this.animationApplied = false;
+    }
+
+    public onLeftSwipeClick(args: ListViewEventData) {
+        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+        this.listViewComponent.listView.notifySwipeToExecuteFinished();
+    }
+
+    public onRightSwipeClick(args) {
+        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+        this.listViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
 }

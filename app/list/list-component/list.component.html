@@ -45,20 +45,52 @@
                 <TextField #groceryTextField
                   col="1"
                   [(ngModel)]="listDescription"
-                  (loaded)="handleAndroidFocus(groceryTextField, container)"
                   [hint]="'Create new list'"
                   returnKeyType="done"
                   *ngIf="!isShowingRecent"
                   (returnPress)="addList('textfield')"></TextField>
             </GridLayout>
-            <RadListView #listview [items]="_lists" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" row="1">
-                <ng-template tkListItemTemplate let-item="item">
-                    <StackLayout orientation="vertical">
+            <RadListView #myListView  row="1" swipeActions="true" selectionBehavior="None"
+              [items]="_lists" 
+              pullToRefresh="true" 
+              (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" 
+              (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
+              (itemSwipeProgressStarted)="onSwipeCellStarted($event)"
+              (itemSwipeProgressChanged)="onCellSwiping($event)">
+
+                <ng-template tkListItemTemplate let-item="item" >
+                    <StackLayout orientation="vertical" (tap)="goToList(item.listKey)" class="listStack">
                         <Label class="nameLabel" [text]="item.description"></Label>
                         <Label class="descriptionLabel" [text]="item.dateCreated"></Label>
                     </StackLayout>
                 </ng-template>
+            
+                <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto">
+                        <!-- <GridLayout columns="*, *, *" col="0" id="left-stack">
+                            <GridLayout col="0" class="markGridLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
+                                <Label text="mark" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                            <GridLayout col="1" class="archiveGridLayout" (tap)="onLeftSwipeClick($event)" id="btnArchive">
+                                <Label text="archive" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                            <GridLayout col="2" class="unreadGridLayout" (tap)="onLeftSwipeClick($event)" id="btnUnread">
+                                <Label text="unread" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                        </GridLayout> -->
+                        <GridLayout columns="*, *, *" col="2" id="right-stack">
+                            <GridLayout col="0" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
+                                <Label text="delete" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                            <GridLayout col="1" class="readGridLayout" (tap)="onRightSwipeClick($event)" id="btnRead">
+                                <Label text="read" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                            <GridLayout col="2" class="forwardGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                                <Label text="forward" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            </GridLayout>
+                        </GridLayout>
+                </GridLayout>
             </RadListView>
+                <!-- << angular-listview-swipe-actions-multiple-template-html -->
             <ActivityIndicator
               [busy]="isLoading"
               row="2">

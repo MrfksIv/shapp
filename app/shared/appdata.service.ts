@@ -6,6 +6,8 @@ import { Subject } from "rxjs/Subject"
 export class AppDataService {
 
     private userInfoSubject  = new Subject<any>();
+    private activeListKey: string;
+
     public user =  {
         profile_photo: undefined,
         username: undefined,
@@ -31,5 +33,15 @@ export class AppDataService {
     getUserInfo(): Observable<any> {
         return this.userInfoSubject.asObservable();
     }
+
+    setActiveList(listkey: string) {
+        this.activeListKey = listkey;
+    }
+
+    getActiveList() {
+        return this.activeListKey;
+    }
+
+    
  
 }

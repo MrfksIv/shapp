@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { ListComponent } from './list-component/list.component';
-
+import { ListItemComponent } from './list-item-component/list-item.component';
 
 const routes: Routes = [
-    {path: "", component: ListComponent}
+    { path: "", component: ListComponent },
+    { path: "list-item", component: ListItemComponent }
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class ListRoutingModule {}
+export class ListRoutingModule {
+    
+}

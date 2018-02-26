@@ -44,7 +44,8 @@ export class ListsService {
                             liststArray.push( new List(currentList['creatorUID'], 
                                         currentList['description'], 
                                         currentList['dateCreated'], 
-                                        currentList['dateModified']));
+                                        currentList['dateModified'],
+                                        list_key));
                         }
                     }
                     this.listsSubjects.next(liststArray);

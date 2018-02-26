@@ -4,6 +4,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { SharedModule } from '../shared/shared.module'
 import { ListComponent } from "./list-component/list.component";
+import { ListItemComponent } from "./list-item-component/list-item.component";
 import { ListRoutingModule } from "./list-routing.module";
 import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
 import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
@@ -20,7 +21,8 @@ import { ListsService } from "./lists.service";
         NativeScriptUIListViewModule
     ],
     declarations: [
-        ListComponent
+        ListComponent,
+        ListItemComponent
     ],
     providers: [
         ListService,
