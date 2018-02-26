@@ -185,7 +185,7 @@ export class ListComponent implements OnInit {
         var swipeLimits = args.data.swipeLimits;
         var swipeView = args['swipeView'];
         this.mainView = args['mainView'];
-        // this.leftItem = swipeView.getViewById('left-stack');
+        this.leftItem = swipeView.getViewById('left-stack');
         this.rightItem = swipeView.getViewById('right-stack');
 
         if (args.data.x > 0) {
