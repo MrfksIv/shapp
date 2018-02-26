@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { SharedModule } from '../shared/shared.module'
 import { ListComponent } from "./list-component/list.component";
@@ -12,6 +13,7 @@ import { ListsService } from "./lists.service";
 @NgModule({
     imports: [
         NativeScriptCommonModule,
+        NativeScriptFormsModule,
         ListRoutingModule,  
         SharedModule,
         NativeScriptUISideDrawerModule,

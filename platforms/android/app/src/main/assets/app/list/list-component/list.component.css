@@ -5,3 +5,33 @@
 .descriptionLabel {
     font-size: 14;
 }
+
+.add-bar-image-container {
+    height: 50;
+    vertical-align: center;
+    margin-left: -15;
+    padding-left: 15;
+    padding-right: 13;
+  }
+
+.add-bar {
+    background-color: #CB1D00;
+    padding-left: 16;
+    padding-right: 16;
+    height: 50;
+}
+
+TextField {
+    color: white;
+    placeholder-color: white;
+    background-color: transparent;
+    font-size: 15;
+    border-width: 0;
+    padding: 0;
+    margin-left: 1;
+}
+
+ActivityIndicator {
+    horizontal-align: center;
+    vertical-align: center;
+  }

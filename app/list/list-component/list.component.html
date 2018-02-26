@@ -26,12 +26,32 @@
     -->
     <GridLayout tkExampleTitle tkToggleNavButton tkMainContent>
         <GridLayout tkExampleTitle tkToggleNavButton rows="auto, *">
-            <StackLayout orientation="horizontal">
+            <!-- <StackLayout orientation="horizontal">
                 <Button class="menu-button" text="Check uid" (tap)="check()"></Button>
                 <Button class="menu-button" text="Add List" (tap)="addList()"></Button>
                 <Button class="menu-button" text="Get Lists" (tap)="getLists()"></Button>
-            </StackLayout>
-            <RadListView [items]="lists" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" row="1">
+            </StackLayout> f067 -->
+            <GridLayout
+                row="0"
+                columns="auto, *, auto"
+                [backgroundColor]="isShowingRecent ? '#BBC169' : '#CB1D00'"
+                class="add-bar">
+                <StackLayout
+                  class="add-bar-image-container"
+                  col="0"
+                  (tap)="addList('button')">
+                  <Label col="0" [text]="'&#xf067;'" class="fa fa-2x"></Label>
+                </StackLayout>
+                <TextField #groceryTextField
+                  col="1"
+                  [(ngModel)]="listDescription"
+                  (loaded)="handleAndroidFocus(groceryTextField, container)"
+                  [hint]="'Create new list'"
+                  returnKeyType="done"
+                  *ngIf="!isShowingRecent"
+                  (returnPress)="addList('textfield')"></TextField>
+            </GridLayout>
+            <RadListView #listview [items]="_lists" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)" row="1">
                 <ng-template tkListItemTemplate let-item="item">
                     <StackLayout orientation="vertical">
                         <Label class="nameLabel" [text]="item.description"></Label>
@@ -39,7 +59,13 @@
                     </StackLayout>
                 </ng-template>
             </RadListView>
-        </GridLayout>   
+            <ActivityIndicator
+              [busy]="isLoading"
+              row="2">
+        </ActivityIndicator>
+        </GridLayout>
+        
+        
     </GridLayout>
 
 </RadSideDrawer>

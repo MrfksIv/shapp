@@ -12,23 +12,18 @@ export class ListsService {
 
     private listsSubjects = new Subject<any>();
 
-    createNewList(uid: string) {
-        if (uid) {
+    createNewList(list:any) {
+        if (list.uid) {
             const list_data = {
-                creatorUID : uid,
-                dateCreated: moment().format("YYYY-MM-DD HH:mm:ss"),
-                dateModified: moment().format("YYYY-MM-DD HH:mm:ss"),
-                description: "LALALALA REFRESH WORKS!!!!!!!!!!!!!!!!!!!!!",
+                creatorUID : list.uid,
+                dateCreated: list.dateCreated,
+                dateModified: list.dateModified,
+                description: list.listDescription,
                 items: []
             };
-            firebase.push(
+            return firebase.push(
                 '/lists',
                 list_data
-            ).then(
-                function (result) {
-                    console.log("saved to lists collection");
-                    console.dir(result);
-                }
             );
         }
     }
@@ -38,8 +33,8 @@ export class ListsService {
             let liststArray = new Array<List>();
             firebase.query( 
                 firebase_result => {
-                    console.log("FIREBASE RESULT:");
-                    console.dir(firebase_result)
+                    // console.log("FIREBASE RESULT:");
+                    // console.dir(firebase_result)
                     if (!firebase_result['value']) {
                         
                         // add code for saving the data to new user
