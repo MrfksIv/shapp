@@ -13,14 +13,16 @@ export class ListsService {
     private listsSubjects = new Subject<any>();
 
     createNewList(list:any) {
-        if (list.uid) {
+        if (list.creatorUID) {
             const list_data = {
-                creatorUID : list.uid,
+                creatorUID : list.creatorUID,
                 dateCreated: list.dateCreated,
                 dateModified: list.dateModified,
-                description: list.listDescription,
+                description: list.description,
+                archived: false,
                 items: []
             };
+            console.log("CREATING NEW LIST FROM SERVICE");
             return firebase.push(
                 '/lists',
                 list_data

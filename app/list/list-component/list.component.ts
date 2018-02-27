@@ -139,17 +139,12 @@ export class ListComponent implements OnInit {
 
         this.listsService.createNewList(list)
         .then((result) => {
-                console.log("saved!");
-                console.dir(result);
-                this.listDescription = '';
-                setTimeout( () => {
-                    this.hideActivityIndicator();
-                    this.getLists();
-                }, 1500);
-                
-            }
-
-        ).catch( err => {
+            console.log("saved!");
+            console.dir(result);
+            this.listDescription = '';
+            this.hideActivityIndicator();
+            this.getLists();
+        }).catch( err => {
             this.hideActivityIndicator();
             (new SnackBar()).simple("List couldn't be created!");
         });
@@ -165,9 +160,9 @@ export class ListComponent implements OnInit {
 
     sortLists(list: Array<List>) {
         list.sort( (a, b) => {
-            if (a['dateModified'] < b['dateModified']) {
+            if (a['dateModified'] > b['dateModified']) {
                 return -1;
-            } else if (a['dateModified'] > b['dateModified']) {
+            } else if (a['dateModified'] < b['dateModified']) {
                 return 1;
             } else {
                 return 0;

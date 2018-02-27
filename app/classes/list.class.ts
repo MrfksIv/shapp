@@ -3,7 +3,8 @@ export class List {
         public description?: string,
         public dateCreated?: string,
         public dateModified?: string,
-        public listKey?: string) {
+        public listKey?: string,
+        public archived?: boolean) {
 
     }
 }
