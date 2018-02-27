@@ -252,8 +252,6 @@ export class ListComponent implements OnInit {
         if (args.object.id === 'btnDelete') {
             this.deleteList(clickedIndex, this._lists[clickedIndex]['listKey']);
         } else if (args.object.id === 'btnArchive') {
-            console.log("archive the list:");
-            console.dir(this._lists[clickedIndex]);
             this.archiveList(clickedIndex, this._lists[clickedIndex]['listKey']);
         } else  if (args.object.id === 'btnShare'){
             console.log("share the list:");
