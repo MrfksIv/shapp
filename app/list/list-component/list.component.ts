@@ -254,6 +254,7 @@ export class ListComponent implements OnInit {
         } else if (args.object.id === 'btnArchive') {
             console.log("archive the list:");
             console.dir(this._lists[clickedIndex]);
+            this.archiveList(clickedIndex, this._lists[clickedIndex]['listKey']);
         } else  if (args.object.id === 'btnShare'){
             console.log("share the list:");
             console.dir(this._lists[clickedIndex]);
@@ -263,6 +264,12 @@ export class ListComponent implements OnInit {
     private deleteList(clickedIndex, listID) {
         this._lists.splice(clickedIndex, 1);
         firebaseWebApi.database().ref("/lists").child(listID).set(null);
+    }
+
+    private archiveList(clickedIndex, listID) {
+        let tmpList = this._lists[clickedIndex];
+        tmpList.archived = true;
+        firebaseWebApi.database().ref("/lists").child(listID).set(tmpList);
     }
 
 }
