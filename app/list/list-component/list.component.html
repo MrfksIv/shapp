@@ -66,26 +66,27 @@
                 </ng-template>
             
                 <GridLayout *tkListItemSwipeTemplate columns="auto, *, auto">
-                    <GridLayout columns="*, *, *" col="0" id="left-stack">
-                        <GridLayout col="0" class="markGridLayout" (tap)="onLeftSwipeClick($event)" id="btnMark">
-                            <Label text="mark" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                        </GridLayout>
-                        <GridLayout col="1" class="archiveGridLayout" (tap)="onLeftSwipeClick($event)" id="btnArchive">
-                            <Label text="archive" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                        </GridLayout>
-                        <GridLayout col="2" class="unreadGridLayout" (tap)="onLeftSwipeClick($event)" id="btnUnread">
-                            <Label text="unread" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
-                        </GridLayout>
-                    </GridLayout>
-                    <GridLayout columns="*, *, *" col="2" id="right-stack">
+                    <GridLayout columns="50, 50, 50" col="0" id="left-stack">
                         <GridLayout col="0" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
-                            <Label text="delete" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            <Label text="&#xf1f8;" class="fa swipeIcon swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
                         </GridLayout>
-                        <GridLayout col="1" class="readGridLayout" (tap)="onRightSwipeClick($event)" id="btnRead">
-                            <Label text="read" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                        <GridLayout col="1" class="archiveGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                            <Label text="&#xf187;" class="fa swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
                         </GridLayout>
                         <GridLayout col="2" class="forwardGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
-                            <Label text="forward" class="swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                            <Label text="&#xf1e0;" class="fa swipetemplateLabel"  verticalAlignment="center" horizontalAlignment="center"></Label>
+                        </GridLayout>
+                        
+                    </GridLayout>
+                    <GridLayout columns="*, 50, 50, 50" col="2" id="right-stack">
+                        <GridLayout col="1" class="deleteGridLayout" (tap)="onRightSwipeClick($event)" id="btnDelete">
+                            <Label text="&#xf1f8;" class="fa swipeIcon swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout col="2" class="archiveGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                            <Label text="&#xf187;" class="fa swipetemplateLabel" verticalAlignment="center" horizontalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout col="3" class="forwardGridLayout" (tap)="onRightSwipeClick($event)" id="btnForward">
+                            <Label text="&#xf1e0;" class="fa swipetemplateLabel"  verticalAlignment="center" horizontalAlignment="center"></Label>
                         </GridLayout>
                     </GridLayout>
                 </GridLayout>
