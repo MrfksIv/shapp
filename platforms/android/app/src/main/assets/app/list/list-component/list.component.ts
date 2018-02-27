@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import * as ApplicationSettings from 'application-settings';
 import * as firebase from 'nativescript-plugin-firebase';
+import * as firebaseWebApi from 'nativescript-plugin-firebase/app';
 import * as moment from 'moment';
 
 import { HttpService } from '../../http.service';
@@ -242,13 +243,31 @@ export class ListComponent implements OnInit {
     }
 
     public onLeftSwipeClick(args: ListViewEventData) {
-        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+        this.handleSwipeTapEvent(args);
         this.listViewComponent.listView.notifySwipeToExecuteFinished();
     }
 
     public onRightSwipeClick(args) {
-        console.log("Button clicked: " + args.object.id + " for item with index: " + this.listViewComponent.listView.items.indexOf(args.object.bindingContext));
+        this.handleSwipeTapEvent(args);
         this.listViewComponent.listView.notifySwipeToExecuteFinished();
+    }
+
+    private handleSwipeTapEvent(args: ListViewEventData) {
+        const clickedIndex = this.listViewComponent.listView.items.indexOf(args.object.bindingContext);
+        if (args.object.id === 'btnDelete') {
+            this.deleteList(clickedIndex, this._lists[clickedIndex]['listKey']);
+        } else if (args.object.id === 'btnArchive') {
+            console.log("archive the list:");
+            console.dir(this._lists[clickedIndex]);
+        } else  if (args.object.id === 'btnShare'){
+            console.log("share the list:");
+            console.dir(this._lists[clickedIndex]);
+        }
+    }
+
+    private deleteList(clickedIndex, listID) {
+        this._lists.splice(clickedIndex, 1);
+        firebaseWebApi.database().ref("/lists").child(listID).set(null);
     }
 
 }

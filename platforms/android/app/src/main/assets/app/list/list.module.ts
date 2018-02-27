@@ -7,7 +7,7 @@ import { ListComponent } from "./list-component/list.component";
 import { ListItemComponent } from "./list-item-component/list-item.component";
 import { ListRoutingModule } from "./list-routing.module";
 import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
-import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
+import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular"; 
 import { ListService } from "./list.service";
 import { ListsService } from "./lists.service";
 

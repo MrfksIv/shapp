@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
 
     ngOnInit() {
         firebase.init({
-            persist: false,
+            persist: true,
             iOSEmulatorFlush: true,
             
             onAuthStateChanged: (data) => {
